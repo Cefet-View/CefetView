@@ -4,8 +4,9 @@ import { setupInteraction } from "./js/interactions.js";
 
 let currentSphere = null;
 let currentHotspots = [];
-let currentSceneId = "d308";
+let currentSceneId = "d308"; // Cena Inicial
 
+// Apagando a antiga esfera e colocando uma nova no lugar
 function setSphere(newSphere) {
   if (currentSphere) {
     scene.remove(currentSphere);
@@ -15,6 +16,7 @@ function setSphere(newSphere) {
   currentSphere = newSphere;
 }
 
+// Apagando os antigos Hotspots e colocando novos no lugar
 function setHotspots(newHotspots) {
   currentHotspots.forEach((hot) => {
     scene.remove(hot);
@@ -24,12 +26,15 @@ function setHotspots(newHotspots) {
   currentHotspots = newHotspots;
 }
 
+// Define o ID da cena atual a ser exibida ou manipulada
 function setSceneId(id) {
   currentSceneId = id;
 }
 
+// Inicializa a cena 3D retornando os elementos utilizados
 const { scene, camera, renderer, controls } = setupScene();
 
+// Função de carregar a cena e colocando a animação de Overlay
 loadScene(currentSceneId, scene, setSphere, setHotspots);
 setupInteraction(
   camera,

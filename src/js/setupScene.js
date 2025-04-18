@@ -3,25 +3,30 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 export function setupScene() {
   const scene = new THREE.Scene();
-
   const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
+    75, // Fov de 75°
+    window.innerWidth / window.innerHeight, // Proporção baseado no tamanho da tela
     1,
-    1100
+    1100 // Plano de visão entre 1 e 1100 unidades
   );
-  camera.position.set(0, 0, 0.1);
 
+  camera.position.set(0, 0, 0.1);
+  // Cria o renderizador WebGL com antialias (suavização de serrilhado)
   const renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.outputColorSpace = THREE.SRGBColorSpace; // ajeitar a cor
+
+  // Define o tamanho do renderizador para ocupar a tela
   renderer.setSize(window.innerWidth, window.innerHeight);
+
+  // Adiciona o canvas do renderizador ao body do HTML
   document.body.appendChild(renderer.domElement);
 
+  // Cria os controles de Orbita
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableZoom = false;
   controls.rotateSpeed = 0.4;
-  controls.enableDamping = true;
+  controls.enableDamping = true; // Movimento suave
   controls.dampingFactor = 0.05;
 
+  // Retorna os elementos configurados
   return { scene, camera, renderer, controls };
 }

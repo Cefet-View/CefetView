@@ -5,6 +5,7 @@ export const scenesData = {
   d308: {
     image: "/images/D_308.jpg",
     hotspot: {
+      // Definição dos hotspots
       image: "/images/hotspot.png",
       position: new THREE.Vector3(-30, -2, 6.5),
       scale: new THREE.Vector3(0.12, 0.12, 1),

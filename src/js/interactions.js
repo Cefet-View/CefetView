@@ -26,7 +26,9 @@ export function setupInteraction(
     raycaster.setFromCamera(mouse, camera);
 
     // Aonde tem interseção entre hotspot e raio do raycaster
-    const intersects = raycaster.intersectObjects(currentHotspots);
+    const intersects = raycaster.intersectObjects(
+      scene.children.filter((obj) => obj.userData?.targetScene)
+    );
     if (intersects.length > 0) {
       // Obtém o ID da cena de destino armazenado no userData do objeto
       const targetScene = intersects[0].object.userData.targetScene;

@@ -8,8 +8,12 @@ Feito pelos alunos do CEFET-NI
 
 Orientado pelo Professor ...
 
-Documentação (rodar no localhost):
+Documentação instalação:
 
-Escrever no terminal ctrl + '
-npm run dev
+Instalar nodeJS e git
 
+Como rodar no localhost:
+
+ctrl + ' (terminal)
+
+primeiro 'npm install' depois 'npm run dev'

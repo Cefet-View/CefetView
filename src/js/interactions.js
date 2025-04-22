@@ -27,6 +27,7 @@ export function setupInteraction(
 
     // Aonde tem interseção entre hotspot e raio do raycaster
     const intersects = raycaster.intersectObjects(
+      // Filtra os objetos da cena (scene.children) para encontrar aqueles que possuem userData.targetScene
       scene.children.filter((obj) => obj.userData?.targetScene)
     );
     if (intersects.length > 0) {

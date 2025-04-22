@@ -12,3 +12,5 @@ Documentação (rodar no localhost):
 
 Escrever no terminal (ctrl + ')
 npm run dev
+
+teste

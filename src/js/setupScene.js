@@ -23,7 +23,7 @@ export function setupScene() {
   // Cria os controles de Orbita
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableZoom = false;
-  controls.rotateSpeed = 0.4;
+  controls.rotateSpeed = -0.3; // Negativo para inverter a direção de rotação
   controls.enableDamping = true; // Movimento suave
   controls.dampingFactor = 0.05;
 

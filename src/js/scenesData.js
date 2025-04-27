@@ -12,7 +12,7 @@ export const scenesData = {
     },
   },
   d208: {
-    image: "/images/Bloco_D/Andar_3/D_208.jpg",
+    image: "/images/Bloco_D/Andar_2/D_208.jpg",
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",

@@ -4,7 +4,6 @@ import { teleportTo } from "./teleport.js";
 // Exporta a função para configurar a interação com os hotspots
 export function setupInteraction(
   camera, // Câmera usada na cena
-  currentHotspots, // Lista de hotspots
   overlay, // Elemento da transição overlay
   scene, // A cena
   setSphere, // Função para alterar a textura da esfera

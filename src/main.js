@@ -38,7 +38,6 @@ const { scene, camera, renderer, controls } = setupScene();
 loadScene(currentSceneId, scene, setSphere, setHotspots);
 setupInteraction(
   camera,
-  currentHotspots,
   document.getElementById("transitionOverlay"),
   scene,
   setSphere,

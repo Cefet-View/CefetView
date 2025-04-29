@@ -1,6 +1,6 @@
-#Projeto de um Tour Virtual para o CEFET UNED NI
+# Projeto de um Tour Virtual para o CEFET UNED NI
 
-##Feito pelos alunos do CEFET-NI:
+## Feito pelos alunos do CEFET-NI:
 
 - Juan Canle Marinho
 - Matheus Santos Fonseca
@@ -8,7 +8,7 @@
 
 Orientado pelo Professor ...
 
-##Documentação instalação:
+## Documentação instalação:
 
 Instalar nodeJS e git
 
@@ -18,7 +18,7 @@ ctrl + ' (terminal)
 
 primeiro 'npm install' depois 'npm run dev'
 
-##Extensões utilitárias:
+## Extensões utilitárias:
 
 - IntelliCode
 - Preetier

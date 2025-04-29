@@ -16,6 +16,8 @@ function setSphere(newSphere) {
   currentSphere = newSphere;
 }
 
+// TODO Adicionar movimentação com setas <> ^v
+
 // Apagando os antigos Hotspots e colocando novos no lugar
 function setHotspots(newHotspots) {
   currentHotspots.forEach((hot) => {

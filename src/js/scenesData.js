@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+// TODO adicionar novos cenários e arrumar os hotspots
+
 // Definição dos cenários
 export const scenesData = {
   d308: {

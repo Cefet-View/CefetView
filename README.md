@@ -8,11 +8,11 @@
 
 Orientado pelo Professor ...
 
-## Documentação instalação:
+## Documentação de instalação:
 
 Instalar nodeJS e git
 
-##Como rodar no localhost:
+## Como rodar no localhost:
 
 ctrl + ' (terminal)
 

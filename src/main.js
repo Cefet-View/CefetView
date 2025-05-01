@@ -4,7 +4,7 @@ import { setupInteraction } from "./js/interactions.js";
 
 let currentSphere = null;
 let currentHotspots = [];
-let currentSceneId = "d308"; // Cena Inicial
+let currentSceneId = "entradaescola"; // Cena Inicial
 
 // Apagando a antiga esfera e colocando uma nova no lugar
 function setSphere(newSphere) {
@@ -15,8 +15,6 @@ function setSphere(newSphere) {
   }
   currentSphere = newSphere;
 }
-
-// TODO Adicionar movimentação com setas <> ^v
 
 // Apagando os antigos Hotspots e colocando novos no lugar
 function setHotspots(newHotspots) {

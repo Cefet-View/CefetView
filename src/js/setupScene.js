@@ -27,6 +27,15 @@ export function setupScene() {
   controls.enableDamping = true; // Movimento suave
   controls.dampingFactor = 0.05;
 
+  controls.enableKeys = true;
+  controls.listenToKeyEvents(window);
+  controls.keys = {
+    LEFT: "ArrowLeft",
+    UP: "ArrowUp",
+    RIGHT: "ArrowRight",
+    BOTTOM: "ArrowDown",
+  };
+
   // Retorna os elementos configurados
   return { scene, camera, renderer, controls };
 }

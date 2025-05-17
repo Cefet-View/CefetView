@@ -5,7 +5,7 @@ import * as THREE from "three";
 // Definição dos cenários
 export const scenesData = {
   entradaescola: {
-    image: "/images/Exterior/Entrada_Escola.jpg",
+    image: "images/Exterior/Entrada_Escola.jpg",
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",
@@ -15,7 +15,6 @@ export const scenesData = {
       },
     ],
   },
-  // TODO confere aí Metheus
   entradameioescola: {
     image: "/images/Exterior/Entrada_Meio_Escola.jpg",
     hotspot: [
@@ -30,7 +29,7 @@ export const scenesData = {
         position: new THREE.Vector3(-37, -2, 1.2),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entradafimescola",
-      }
+      },
     ],
   },
   entradafimescola: {
@@ -41,7 +40,7 @@ export const scenesData = {
         position: new THREE.Vector3(-10, -2, -25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
-      }
+      },
     ],
   },
   entradaquadra: {
@@ -86,7 +85,7 @@ export const scenesData = {
         position: new THREE.Vector3(-1, -3, -25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_cmc",
-      }
+      },
     ],
   },
   d_corredor_esquerda_cmc: {
@@ -103,7 +102,7 @@ export const scenesData = {
         position: new THREE.Vector3(30, -2, 0),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_meio",
-      }
+      },
     ],
   },
   d_corredor_esquerda_meio: {
@@ -120,7 +119,7 @@ export const scenesData = {
         position: new THREE.Vector3(27, -4, -4),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d207",
-      }
+      },
     ],
   },
   d207: {
@@ -164,5 +163,4 @@ export const scenesData = {
     },
   },
   // TODO tem que melhorar esse nome lado quadra é fodakkkk
-  
 };

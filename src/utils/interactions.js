@@ -16,6 +16,36 @@ export function setupInteraction(
   // Vetor que armazena a posição do mouse
   const mouse = new THREE.Vector2();
 
+  window.addEventListener("mousemove", (event) => {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    const intersects = raycaster.intersectObjects(
+      scene.children.filter((obj) => obj.userData?.targetScene)
+    );
+
+    // Resetar todos os hotspots para escala original (0.1, 0.1, 1)
+    scene.children.forEach((obj) => {
+      if (obj.userData?.targetScene) {
+        obj.scale.lerp(new THREE.Vector3(0.1, 0.1, 1), 0.1); // animação suave
+      }
+    });
+
+    if (intersects.length > 0) {
+      document.body.style.cursor = "pointer";
+
+      const hotspot = intersects[0].object;
+
+      // Animação de destaque: aumentar levemente o hotspot apontado
+      const targetScale = new THREE.Vector3(0.15, 0.15, 1);
+      hotspot.scale.lerp(targetScale, 0.1); // Animação suave com lerp
+    } else {
+      document.body.style.cursor = "default";
+    }
+  });
+
   window.addEventListener("click", (event) => {
     // Converte a posição do clique do mouse em coordenadas
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; // * 2 -1 é para normalizar as coordenadas

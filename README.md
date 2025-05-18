@@ -8,6 +8,14 @@
 
 Orientado pelo Professor ...
 
+## Bibliotecas e Frameworks utilizados
+
+- Vite
+- ReactJs
+- TailwindCss
+
+# Para rodar a aplicação web
+
 ## Documentação de instalação:
 
 Instalar nodeJS e git

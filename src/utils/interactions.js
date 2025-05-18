@@ -27,7 +27,6 @@ export function setupInteraction(
       scene.children.filter((obj) => obj.userData?.targetScene)
     );
 
-    // Resetar todos os hotspots para escala original (0.1, 0.1, 1)
     // Resetar todos os hotspots para sua escala original armazenada
     scene.children.forEach((obj) => {
       if (obj.userData?.targetScene && obj.userData.originalScale) {

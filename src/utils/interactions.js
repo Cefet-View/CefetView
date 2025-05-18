@@ -28,57 +28,63 @@ export function setupInteraction(
     );
 
     // Resetar todos os hotspots para escala original (0.1, 0.1, 1)
+    // Resetar todos os hotspots para sua escala original armazenada
     scene.children.forEach((obj) => {
-      if (obj.userData?.targetScene) {
-        obj.scale.lerp(new THREE.Vector3(0.1, 0.1, 1), 0.1); // animação suave
+      if (obj.userData?.targetScene && obj.userData.originalScale) {
+        obj.scale.lerp(obj.userData.originalScale, 0.1);
       }
     });
 
-    if (intersects.length > 0) 
-      {
-      document.body.style.cursor = "pointer";
+    if (intersects.length > 0) {
       const hotspot = intersects[0].object;
 
-      if (!hotspot.userData.hoverMaterial) 
-        {
-        const texturaHover = new THREE.TextureLoader().load("/images/Utilitários/hotspot_branco.png");
+      // Animação de destaque: aumentar levemente o hotspot apontado
+      const targetScale = new THREE.Vector3(0.15, 0.15, 1);
+      hotspot.scale.lerp(targetScale, 0.1); // Animação suave com lerp
+
+      // Trocar o cursor para pointer
+      document.body.style.cursor = "pointer";
+
+      if (!hotspot.userData.hoverMaterial) {
+        const textureHover = new THREE.TextureLoader().load(
+          "/images/Utilitários/hotspot_branco.png"
+        );
         hotspot.userData.hoverMaterial = new THREE.MeshBasicMaterial({
-          map: texturaHover,
+          map: textureHover,
           transparent: true,
           alphaTest: 0.7, // Remove o fundo preto tirando os pixeis com baixa opacidade
           side: THREE.DoubleSide, // Visível dos dois lados
           premultipliedAlpha: true,
         });
       }
-      if (!hotspot.userData.originalMaterial) 
-        {
+
+      // Armazena o material original antes de sobrescrever
+      if (!hotspot.userData.originalMaterial) {
         hotspot.userData.originalMaterial = hotspot.material.clone();
       }
-      // Troca para o material de hover
+
+      // Troca para o material hotspot branco
       hotspot.material = hotspot.userData.hoverMaterial;
-  
+
       // Guarda qual foi o último hotspot com hover
-      if (previousHoveredHotspot && previousHoveredHotspot !== hotspot) 
-        {
+      if (previousHoveredHotspot && previousHoveredHotspot !== hotspot) {
         // Restaura o anterior
-        previousHoveredHotspot.material = previousHoveredHotspot.userData.originalMaterial;
+        previousHoveredHotspot.material =
+          previousHoveredHotspot.userData.originalMaterial;
       }
-  
+
       previousHoveredHotspot = hotspot;
-      // Animação de destaque: aumentar levemente o hotspot apontado
-      const targetScale = new THREE.Vector3(0.15, 0.15, 1);
-      hotspot.scale.lerp(targetScale, 0.1); // Animação suave com lerp
-    } 
-    else 
-    {
+    } else {
       document.body.style.cursor = "default";
-      if (previousHoveredHotspot) 
-        {
-         // Restaura o material original salvo anteriormente
-        previousHoveredHotspot.material = previousHoveredHotspot.userData.originalMaterial;
+
+      if (previousHoveredHotspot) {
+        // Restaura o material original salvo anteriormente
+        previousHoveredHotspot.material =
+          previousHoveredHotspot.userData.originalMaterial;
         previousHoveredHotspot = null;
       }
-  }});
+    }
+  });
 
   window.addEventListener("click", (event) => {
     // Converte a posição do clique do mouse em coordenadas

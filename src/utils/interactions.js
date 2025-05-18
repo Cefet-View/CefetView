@@ -15,7 +15,8 @@ export function setupInteraction(
 
   // Vetor que armazena a posição do mouse
   const mouse = new THREE.Vector2();
-
+  //muito importante tira isso nao dog
+  let previousHoveredHotspot = null;
   window.addEventListener("mousemove", (event) => {
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -49,7 +50,6 @@ export function setupInteraction(
           premultipliedAlpha: true,
         });
       }
-
       if (!hotspot.userData.originalMaterial) 
         {
         hotspot.userData.originalMaterial = hotspot.material.clone();

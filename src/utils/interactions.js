@@ -12,11 +12,18 @@ export function setupInteraction(
 ) {
   // Cria um raycaster para detectar interações com os hotspots
   const raycaster = new THREE.Raycaster();
-
   // Vetor que armazena a posição do mouse
   const mouse = new THREE.Vector2();
-  //muito importante tira isso nao dog
+  // Variável para armazenar o último hotspot que estava com hover
   let previousHoveredHotspot = null;
+
+  // Armazena a escala original de cada hotspot quando encontrado pela primeira vez
+  scene.children.forEach((obj) => {
+    if (obj.userData?.targetScene && !obj.userData.originalScale) {
+      obj.userData.originalScale = obj.scale.clone();
+    }
+  });
+
   window.addEventListener("mousemove", (event) => {
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -27,18 +34,32 @@ export function setupInteraction(
       scene.children.filter((obj) => obj.userData?.targetScene)
     );
 
-    // Resetar todos os hotspots para sua escala original armazenada
+    // Resetar todos os hotspots para escala original (usando a escala original armazenada)
     scene.children.forEach((obj) => {
-      if (obj.userData?.targetScene && obj.userData.originalScale) {
-        obj.scale.lerp(obj.userData.originalScale, 0.1);
+      if (obj.userData?.targetScene) {
+        // Verifica se a escala original foi armazenada
+        if (!obj.userData.originalScale) {
+          obj.userData.originalScale = obj.scale.clone();
+        }
+        // Usa a escala original para retornar ao tamanho normal
+        obj.scale.lerp(obj.userData.originalScale, 0.1); // animação suave
       }
     });
 
     if (intersects.length > 0) {
       const hotspot = intersects[0].object;
 
-      // Animação de destaque: aumentar levemente o hotspot apontado
-      const targetScale = new THREE.Vector3(0.15, 0.15, 1);
+      // Verifica se a escala original foi armazenada
+      if (!hotspot.userData.originalScale) {
+        hotspot.userData.originalScale = hotspot.scale.clone();
+      }
+
+      // Animação de destaque: aumentar o hotspot baseado na sua escala original
+      const targetScale = new THREE.Vector3(
+        hotspot.userData.originalScale.x * 1.5,
+        hotspot.userData.originalScale.y * 1.5,
+        hotspot.userData.originalScale.z
+      );
       hotspot.scale.lerp(targetScale, 0.1); // Animação suave com lerp
 
       // Trocar o cursor para pointer

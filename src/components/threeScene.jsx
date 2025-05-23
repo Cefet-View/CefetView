@@ -3,6 +3,9 @@ import { setupScene } from "../utils/setupScene";
 import { loadScene } from "../utils/sceneLoader";
 import { setupInteraction } from "../utils/interactions";
 
+// Componentes
+import InitialPage from "./initialPage";
+
 export default function ThreeScene() {
   const mountRef = useRef(null); // Div onde a cena 3D será montada
   const overlayRef = useRef(null); // Transição de tela (overlay) para efeito de fade-in/fade-out
@@ -80,8 +83,10 @@ export default function ThreeScene() {
         className="fixed top-0 left-0 w-screen h-screen opacity-0 pointer-events-none z-10 transition-opacity duration-[1000ms] ease-[ease]"
         style={{ backdropFilter: "blur(40px)" }}
       />
-      <div ref={mountRef} className="w-screen h-screen" />{" "}
-      {/* Div onde a cena 3D será montada */}
+      <div className="relative w-screen h-screen">
+        <div ref={mountRef} className="w-full h-full" />
+        <InitialPage />
+      </div>
     </>
   );
 }

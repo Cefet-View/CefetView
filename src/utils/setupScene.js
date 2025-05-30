@@ -23,5 +23,9 @@ export function setupScene(container) {
   controls.enableDamping = true;
   controls.dampingFactor = 0.05;
 
+  window.addEventListener("resize", () => {
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.render(scene, camera);
+  });
   return { scene, camera, renderer, controls };
 }

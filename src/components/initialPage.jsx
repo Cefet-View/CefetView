@@ -5,7 +5,7 @@ import { loadScene } from "../utils/sceneLoader";
 
 // Componentes
 
-export default function InitialPage() {
+export default function InitialPage({ scene, setSphere, setHotspots, setSceneId }) {
   // TODO Fazer com que ao clicar nos botões de cena, a cena seja carregada e a esfera atualizada com a textura correta
   // Atualmente os botões de cena apenas atualizam o estado do botão selecionado, mas não carregam a cena
   // Eu consegui trazer o sceneId para aqui porém o loadScene(sceneId, scene, setSphere, setHotspots) precisa desses outros parâmetros
@@ -60,10 +60,12 @@ export default function InitialPage() {
               key={label} // É necessário para o React identificar cada botão de forma única se não ele fica reclamando
               label={label} // Texto do botão
               isSelected={botaoSelecionado === label} // Verifica se o botão está selecionado, se sim retorna True com o ===
-              onClick={() => {
-                setBotaoSelecionado(label); // Atualiza o estado do botão selecionado
-                loadScene(sceneId); // Chama a função de carregar a cena com o ID da cena
-              }}
+              onClick={ () => 
+                {
+                setBotaoSelecionado(label); // muda visual
+                setSceneId(sceneId); // atualiza o id da cena, se necessário
+                loadScene(sceneId, scene, setSphere, setHotspots); // carrega a nova cena
+                } }
             />
           ))}
         </div>

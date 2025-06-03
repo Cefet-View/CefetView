@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { setupScene } from "../utils/setupScene";
 import { loadScene } from "../utils/sceneLoader";
 import { setupInteraction } from "../utils/interactions";
@@ -9,7 +9,7 @@ import InitialPage from "./initialPage";
 export default function ThreeScene() {
   const mountRef = useRef(null); // Div onde a cena 3D será montada
   const overlayRef = useRef(null); // Transição de tela (overlay) para efeito de fade-in/fade-out
-
+  const [sceneState, setSceneState] = useState(null);
   // Hook para executar o código quando o componente é montado
   useEffect(() => {
     // Verifica se as referências DOM estão definidas
@@ -59,6 +59,14 @@ export default function ThreeScene() {
       setSceneId
     );
 
+    setSceneState(
+      {
+      scene,
+      setSphere,
+      setHotspots,
+      setSceneId,
+       } );
+
     function animate() {
       // Função de animação contínua da cena
       requestAnimationFrame(animate);
@@ -85,8 +93,15 @@ export default function ThreeScene() {
       />
       <div className="relative w-screen h-screen">
         <div ref={mountRef} className="w-full h-full" />
-        <InitialPage />
-      </div>
+          {sceneState && (
+          <InitialPage 
+            scene={sceneState.scene}
+            setSphere={sceneState.setSphere}
+            setHotspots={sceneState.setHotspots}
+            setSceneId={sceneState.setSceneId}
+          />
+          )}
+        </div>
     </>
   );
 }

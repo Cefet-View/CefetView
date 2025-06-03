@@ -5,6 +5,7 @@ import { setupInteraction } from "../utils/interactions";
 
 // Componentes
 import InitialPage from "./initialPage";
+import { overlay } from "three/tsl";
 
 export default function ThreeScene() {
   const mountRef = useRef(null); // Div onde a cena 3D será montada
@@ -65,6 +66,7 @@ export default function ThreeScene() {
       setSphere,
       setHotspots,
       setSceneId,
+      overlay
        } );
 
     function animate() {
@@ -99,6 +101,7 @@ export default function ThreeScene() {
             setSphere={sceneState.setSphere}
             setHotspots={sceneState.setHotspots}
             setSceneId={sceneState.setSceneId}
+            overlay={sceneState.overlay}
           />
           )}
         </div>

@@ -5,7 +5,7 @@ import { loadScene } from "../utils/sceneLoader";
 
 // Componentes
 
-export default function InitialPage({ scene, setSphere, setHotspots, setSceneId }) {
+export default function InitialPage({ scene, setSphere, setHotspots, setSceneId, overlay }) {
   // TODO Fazer com que ao clicar nos botões de cena, a cena seja carregada e a esfera atualizada com a textura correta
   // Atualmente os botões de cena apenas atualizam o estado do botão selecionado, mas não carregam a cena
   // Eu consegui trazer o sceneId para aqui porém o loadScene(sceneId, scene, setSphere, setHotspots) precisa desses outros parâmetros
@@ -64,7 +64,7 @@ export default function InitialPage({ scene, setSphere, setHotspots, setSceneId 
                 {
                 setBotaoSelecionado(label); // muda visual
                 setSceneId(sceneId); // atualiza o id da cena, se necessário
-                loadScene(sceneId, scene, setSphere, setHotspots); // carrega a nova cena
+                loadScene(sceneId, scene, setSphere, setHotspots, overlay); // carrega a nova cena
                 } }
             />
           ))}

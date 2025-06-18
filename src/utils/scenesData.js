@@ -61,7 +61,7 @@ export const scenesData = {
     ],
   },
   ladoquadra: {
-    image: "/images/Exterior/lado_quadra.jpg",
+    image: "/images/Exterior/Lado_quadra.jpg",
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",

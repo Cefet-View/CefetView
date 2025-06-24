@@ -2,10 +2,17 @@ import React from "react";
 import { useState } from "react";
 import SceneButton from "./sceneButton";
 import { loadScene } from "../utils/sceneLoader";
+import SearchButton from "./searchButton";
 
 // Componentes
 
-export default function InitialPage({ scene, setSphere, setHotspots, setSceneId, overlay }) {
+export default function InitialPage({
+  scene,
+  setSphere,
+  setHotspots,
+  setSceneId,
+  overlay,
+}) {
   // TODO Fazer com que ao clicar nos botões de cena, a cena seja carregada e a esfera atualizada com a textura correta
   // Atualmente os botões de cena apenas atualizam o estado do botão selecionado, mas não carregam a cena
   // Eu consegui trazer o sceneId para aqui porém o loadScene(sceneId, scene, setSphere, setHotspots) precisa desses outros parâmetros
@@ -36,10 +43,8 @@ export default function InitialPage({ scene, setSphere, setHotspots, setSceneId,
         flex flex-col justify-center items-center gap-10
         transition-all duration-1000 ease-in-out`}
     >
-      <h1
-        className="text-8xl font-extrabold
-        bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-blue-900"
-      >
+      <SearchButton />
+      <h1 className="text-6xl sm:text-8xl font-extrabold tracking-tight drop-shadow text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-900">
         CEFET-VIEW
       </h1>
 
@@ -54,18 +59,17 @@ export default function InitialPage({ scene, setSphere, setHotspots, setSceneId,
           INICIAR
         </button>
 
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-4">
           {Object.entries(botoes).map(([label, sceneId]) => (
             <SceneButton
               key={label} // É necessário para o React identificar cada botão de forma única se não ele fica reclamando
               label={label} // Texto do botão
               isSelected={botaoSelecionado === label} // Verifica se o botão está selecionado, se sim retorna True com o ===
-              onClick={ () => 
-                {
+              onClick={() => {
                 setBotaoSelecionado(label); // muda visual
                 setSceneId(sceneId); // atualiza o id da cena, se necessário
                 loadScene(sceneId, scene, setSphere, setHotspots, overlay); // carrega a nova cena
-                } }
+              }}
             />
           ))}
         </div>

@@ -1,4 +1,29 @@
-export default function SearchButton() {
+
+import { useState } from "react";
+import { scenesData } from "../utils/scenesData.js";
+export default function SearchButton({ onSearch })
+{
+  const [pesquisa, setPesquisa] = useState("");
+
+  const Baguio_pesquisa = () => {
+    const pesquisa_geral = pesquisa.trim().toLowerCase();
+    // Procurar por chave do dicionario ou imagem que combine com o texto escrito
+    const matchedKey = Object.keys(scenesData).find((chave) => {
+      return (
+        chave.toLowerCase().includes(pesquisa_geral) || scenesData[chave].image.toLowerCase().includes(pesquisa_geral)
+      );
+    } ) ;
+
+    if (matchedKey) {
+      onSearch(matchedKey);  // Troca a imagem
+      alert("imagem achada, repito imagem achada")
+    } 
+    else 
+    {
+      alert("Cena não encontrada.");
+    }
+  };
+  
   return (
     <div className="bg-white/30 backdrop-blur-sm flex items-center px-4 py-2 rounded-full border border-white/30 max-w-md w-full shadow-xl/40 space-x-3 transition">
       <svg
@@ -13,10 +38,13 @@ export default function SearchButton() {
       <input
         type="text"
         placeholder="Digite o local desejado..."
+        value={pesquisa}
+        onChange={ (x) => setPesquisa(x.target.value)}
         className="flex-grow outline-none text-sm"
       />
       <button
         type="button"
+        onClick={Baguio_pesquisa} // Chama a função de pesquisa
         className="bg-blue-600 hover:bg-blue-700 transition-all text-white text-sm font-bold rounded-full px-6 py-2"
       >
         IR

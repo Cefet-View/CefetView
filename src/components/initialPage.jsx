@@ -43,7 +43,11 @@ export default function InitialPage({
         flex flex-col justify-center items-center gap-10
         transition-all duration-1000 ease-in-out`}
     >
-      <SearchButton />
+      <SearchButton onSearch={(sceneIdBuscado) => {
+      setSceneId(sceneIdBuscado);
+      loadScene(sceneIdBuscado, scene, setSphere, setHotspots, overlay);
+      }} 
+  />
       <h1 className="text-6xl sm:text-8xl font-extrabold tracking-tight drop-shadow text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-900">
         CEFET-VIEW
       </h1>

@@ -12,6 +12,17 @@ A plataforma foi idealizada para facilitar a ambientação no espaço físico da
 
 ---
 
+### 👥 Equipe do Projeto
+
+| Nome                                                                | Função       | Perfil |
+| ------------------------------------------------------------------- | ------------ | ------ |
+| [Juan Canle Marinho](https://github.com/JuanCanle)                  | Participante | GitHub |
+| [Matheus Santos Fonseca](https://github.com/Matheus-Santos-Fonseca) | Participante | GitHub |
+| [Davi Nogueira Souto](https://github.com/DaviNogueira12)            | Participante | GitHub |
+| [Ulisses Roque Tomaz](https://github.com/UlissesRTomaz)             | Orientador   | GitHub |
+
+---
+
 ### ✨ Funcionalidades
 
 - **Busca de locais**: sistema de pesquisa rápida e eficiente para encontrar ambientes do campus.
@@ -21,7 +32,7 @@ A plataforma foi idealizada para facilitar a ambientação no espaço físico da
 
 ---
 
-### 🧰 Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas
 
 | Tecnologia                                                                                                                                                        | Descrição                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |

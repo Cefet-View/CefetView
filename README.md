@@ -1,3 +1,7 @@
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-4.0-38B2AC?logo=tailwindcss)
+
 # CEFET-View – Tour Virtual Interativo do Campus Nova Iguaçu
 
 > Projeto Acadêmico desenvolvido como Trabalho de Conclusão de Curso (TCC) na disciplina Projeto Final do CEFET-RJ – Unidade Nova Iguaçu.
@@ -8,7 +12,7 @@ A plataforma foi idealizada para facilitar a ambientação no espaço físico da
 
 ---
 
-## 📌 Funcionalidades
+### ✨ Funcionalidades
 
 - **Busca de locais**: sistema de pesquisa rápida e eficiente para encontrar ambientes do campus.
 - **Navegação por setores**: explore visualmente diferentes áreas como salas, laboratórios, biblioteca, auditórios e áreas administrativas.
@@ -17,33 +21,37 @@ A plataforma foi idealizada para facilitar a ambientação no espaço físico da
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+### 🧰 Tecnologias Utilizadas
 
-- **[Vite](https://vitejs.dev/)** – Empacotador rápido de módulos para desenvolvimento com React.
-- **[React.js](https://reactjs.org/)** – Biblioteca JavaScript para construção de interfaces interativas.
-- **[Tailwind CSS](https://tailwindcss.com/)** – Framework CSS utilitário para estilização moderna e responsiva.
+| Tecnologia                                                                                                                                                        | Descrição                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| <img src="https://vitejs.dev/logo.svg" width="24" alt="Vite"/> [**Vite**](https://vitejs.dev/)                                                                    | Empacotador moderno para desenvolvimento.     |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="24" alt="React.js"/> [**React.js**](https://reactjs.org/)                    | Biblioteca para criação de interfaces UI.     |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="24" alt="Tailwind CSS"/> [**Tailwind CSS**](https://tailwindcss.com/) | Framework utilitário para estilização rápida. |
 
 ---
 
-## 🚀 Como Executar Localmente
+### 🚀 Como Executar Localmente
 
-### ✅ Pré-requisitos:
+#### ✅ Pré-requisitos
 
-- [Node.js](https://nodejs.org/) (recomenda-se versão 18+)
-- [Git](https://git-scm.com/)
+| Ferramenta                                                                                                                                | Versão recomendada |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="24" alt="Node.js"/> [Node.js](https://nodejs.org/) | 18+                |
+| <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="24" alt="Git"/> [Git](https://git-scm.com/)               | Qualquer           |
 
-### 📥 Instalação:
+#### 📥 Instalação e execução
 
-```bash
+```bash title="Clonar e rodar localmente"
 # Clone o repositório
 git clone https://github.com/Cefet-View/Cefet-View
 
-# Acesse o diretório
+# Entre no diretório do projeto
 cd cefet-view
 
 # Instale as dependências
 npm install
 
-# Execute o projeto
+# Execute o projeto em modo desenvolvimento
 npm run dev
 ```

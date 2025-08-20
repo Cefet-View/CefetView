@@ -18,6 +18,11 @@ export function setupScene(container) {
   container.appendChild(renderer.domElement);
 
   const controls = new OrbitControls(camera, renderer.domElement);
+
+  controls.enableRotate = false;
+  controls.enableZoom = false;
+  controls.enablePan = false;
+
   controls.enableZoom = false;
   controls.rotateSpeed = -0.3;
   controls.enableDamping = true;

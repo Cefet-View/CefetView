@@ -60,14 +60,14 @@ export default function ThreeScene() {
       setSceneId
     );
 
-    setSceneState(
-      {
+    setSceneState({
       scene,
       setSphere,
       setHotspots,
       setSceneId,
-      overlay
-       } );
+      overlay,
+      controls,
+    });
 
     function animate() {
       // Função de animação contínua da cena
@@ -95,16 +95,17 @@ export default function ThreeScene() {
       />
       <div className="relative w-screen h-screen">
         <div ref={mountRef} className="w-full h-full" />
-          {sceneState && (
-          <InitialPage 
+        {sceneState && (
+          <InitialPage
             scene={sceneState.scene}
             setSphere={sceneState.setSphere}
             setHotspots={sceneState.setHotspots}
             setSceneId={sceneState.setSceneId}
             overlay={sceneState.overlay}
+            controls={sceneState.controls}
           />
-          )}
-        </div>
+        )}
+      </div>
     </>
   );
 }

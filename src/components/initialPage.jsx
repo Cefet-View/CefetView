@@ -31,9 +31,20 @@ export default function InitialPage({
   }
 
   function alternarMenu() {
+    const novoShow = !show; // estado que a tela vai ficar
     setMoviment(!moviment);
-    setShow(!show);
+    setShow(novoShow);
     trocarControle(!moviment);
+    lockarHotspots(novoShow);
+  }
+
+  function lockarHotspots(desabilitado) {
+    // Desabilita todos os hotspots
+    scene.children.forEach((obj) => {
+      if (obj.userData?.targetScene) {
+        obj.userData.enabled = !desabilitado; // se desabilitado for true → enabled = false
+      }
+    });
   }
 
   return (
@@ -120,3 +131,4 @@ export default function InitialPage({
     </>
   );
 }
+

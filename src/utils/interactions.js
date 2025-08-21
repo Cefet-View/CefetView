@@ -31,7 +31,7 @@ export function setupInteraction(
     raycaster.setFromCamera(mouse, camera);
 
     const intersects = raycaster.intersectObjects(
-      scene.children.filter((obj) => obj.userData?.targetScene)
+scene.children.filter((obj) => obj.userData?.targetScene && obj.userData.enabled)
     );
 
     // Resetar todos os hotspots para escala original (usando a escala original armazenada)
@@ -117,7 +117,7 @@ export function setupInteraction(
     // Aonde tem interseção entre hotspot e raio do raycaster
     const intersects = raycaster.intersectObjects(
       // Filtra os objetos da cena (scene.children) para encontrar aqueles que possuem userData.targetScene
-      scene.children.filter((obj) => obj.userData?.targetScene)
+      scene.children.filter((obj) => obj.userData?.targetScene && obj.userData.enabled)
     );
     if (intersects.length > 0) {
       // Obtém o ID da cena de destino armazenado no userData do objeto

@@ -65,7 +65,7 @@ export function loadScene(sceneId, scene, setSphere, setHotspots) {
 
       // Armazena o ID da cena de destino no objeto
       hotspot.userData.targetScene = hsData.targetScene;
-
+      hotspot.userData.enabled = true; // Inicialmente habilitado
       // Adiciona o hotspot a lista e a cena
       loadedHotspots.push(hotspot);
       scene.add(hotspot);

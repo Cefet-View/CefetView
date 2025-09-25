@@ -131,9 +131,106 @@ export const scenesData = {
         position: new THREE.Vector3(2, -5, 22.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_direita_cmc",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(5, -5, 3),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "entrada_bloco_d",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(16, 2.6, -4),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar3",
       }
     ],
   },
+  d_escada_andar3: {
+    image: "/images/Bloco_D/Andar_3/D_Escada.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-3, -3, -0.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar2",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-1, -3, -14),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_direita_cmc3",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-1.5, -3, 18),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_esquerda_cmc3",
+      }
+    ],
+  },
+  d_corredor_direita_cmc3: {
+    image: "/images/Bloco_D/Andar_3/D_Corredor_Direita_cmc.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(1.5, -3, -20),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar3",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -3, 0.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_direita_meio3",
+      }
+    ],
+  },
+  d_corredor_direita_meio3: {
+    image: "/images/Bloco_D/Andar_3/D_Corredor_Direita.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -3, -0.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_direita_cmc3",
+      }
+    ],
+  },
+  d_corredor_esquerda_cmc3: {
+    image: "/images/Bloco_D/Andar_3/D_Corredor_Esquerda_cmc.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(1.5, -3, 19),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar3",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -3, -1),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_esquerda_meio3",
+      }
+    ],
+  },
+  d_corredor_esquerda_meio3: {
+    image: "/images/Bloco_D/Andar_3/D_Corredor_Esquerda.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(1.5, -3, 19),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -3, 0.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "",
+      }
+    ],
+  },  
   d_corredor_esquerda_cmc: {
     image: "/images/Bloco_D/Andar_2/D_Corredor_Esquerda_cmc.jpg",
     hotspot: [
@@ -149,6 +246,18 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
       }
+    ],
+  },
+  d_corredor_direita_cmc: {
+    image: "/images/Bloco_D/Andar_2/D_Corredor_Direita_cmc.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-10.5, -3, -15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar2",
+      },
+
     ],
   },
   d_corredor_esquerda_meio: {
@@ -243,30 +352,36 @@ export const scenesData = {
   },
   d308: {
     image: "/images/Bloco_D/Andar_3/D_308.jpg",
-    hotspot: {
-      image: "/images/Utilitários/hotspot.png",
-      position: new THREE.Vector3(-30, -2, 6.5),
-      scale: new THREE.Vector3(0.12, 0.12, 1),
-      targetScene: "d208",
-    },
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-30, -2, 6.5),
+        scale: new THREE.Vector3(0.12, 0.12, 1),
+        targetScene: "d208",
+      },
+    ]  
   },
   d310: {
     image: "/images/Bloco_D/Andar_3/D_310.jpg",
-    hotspot: {
-      image: "/images/Utilitários/hotspot.png",
-      position: new THREE.Vector3(-30, -2, 6.5),
-      scale: new THREE.Vector3(0.12, 0.12, 1),
-      targetScene: "d208",
-    },
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-30, -2, 6.5),
+        scale: new THREE.Vector3(0.12, 0.12, 1),
+        targetScene: "d208",
+      },
+    ]  
   },
   corredor_direita_cmc: {
     image: "/images/Bloco_D/Andar_2/D_Corredor_Direita_cmc.jpg",
-    hotspot: {
-      image: "/images/Utilitários/hotspot.png",
-      position: new THREE.Vector3(-30, -2, 6.5),
-      scale: new THREE.Vector3(0.12, 0.12, 1),
-      targetScene: "d208",
-    },
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-30, -2, 6.5),
+        scale: new THREE.Vector3(0.12, 0.12, 1),
+        targetScene: "d208",
+      },
+    ]  
   },
   // TODO tem que melhorar esse nome lado quadra é fodakkkk
 };

@@ -18,7 +18,7 @@ export default function ThreeScene() {
 
     let currentSphere = null; // Esfera atual da cena
     let currentHotspots = []; // Hotspots atuais da cena
-    let currentSceneId = "entradaescola"; // ID da cena atual
+    let currentSceneId = "entrada_blocos_abc"; // ID da cena atual
 
     const { scene, camera, renderer, controls } = setupScene(mountRef.current); // Chama setupScene, passando o div DOM (mountRef.current), e recebe os objetos da cena
 

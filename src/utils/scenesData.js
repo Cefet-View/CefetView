@@ -97,6 +97,12 @@ export const scenesData = {
         position: new THREE.Vector3(8, -1.5, 40),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entradafimescola",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-25, -2, 1.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "entrada_blocos_abc",
       }
     ],
   },
@@ -134,7 +140,7 @@ export const scenesData = {
       },
       {
         image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(5, -5, 3),
+        position: new THREE.Vector3(15, -8, 2.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entrada_bloco_d",
       },
@@ -146,12 +152,76 @@ export const scenesData = {
       }
     ],
   },
+  d_corredor_esquerda_cmc: {
+    image: "/images/Bloco_D/Andar_2/D_Corredor_Esquerda_cmc.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(25, -1.5, -0.75),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_esquerda_meio",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(0.5, -3, 20),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar2",
+      }
+    ],
+  },
+  d_corredor_esquerda_meio: {
+    image: "/images/Bloco_D/Andar_2/D_Corredor_Esquerda_Meio.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(1, -4.5, 5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d204",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(1.25, -4, -5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d205",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(27, -6, 7),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d206",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(27, -6, -4),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d207",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-27.5, -2, -2.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_corredor_esquerda_cmc",
+      }
+    ],
+  },
+  d_corredor_direita_cmc: {
+    image: "/images/Bloco_D/Andar_2/D_Corredor_Direita_cmc.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-10.5, -3, -15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d_escada_andar2",
+      },
+
+    ],
+  },
   d_escada_andar3: {
     image: "/images/Bloco_D/Andar_3/D_Escada.jpg",
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(-3, -3, -0.5),
+        position: new THREE.Vector3(-10, -5.5, -0.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
       },
@@ -219,82 +289,31 @@ export const scenesData = {
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(1.5, -3, 19),
+        position: new THREE.Vector3(30, -3, 1.25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "",
+        targetScene: "d_corredor_esquerda_cmc3",
       },
       {
         image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(30, -3, 0.25),
+        position: new THREE.Vector3(18, -4, -2.75),
         scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "",
-      }
+        targetScene: "d308",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(-1.5, -4.25, -5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d310",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(0, -4.25, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d312",
+      },
+      
     ],
   },  
-  d_corredor_esquerda_cmc: {
-    image: "/images/Bloco_D/Andar_2/D_Corredor_Esquerda_cmc.jpg",
-    hotspot: [
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(25, -1.5, -0.75),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d_corredor_esquerda_meio",
-      },
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(0.5, -3, 20),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d_escada_andar2",
-      }
-    ],
-  },
-  d_corredor_direita_cmc: {
-    image: "/images/Bloco_D/Andar_2/D_Corredor_Direita_cmc.jpg",
-    hotspot: [
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(-10.5, -3, -15),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d_escada_andar2",
-      },
-
-    ],
-  },
-  d_corredor_esquerda_meio: {
-    image: "/images/Bloco_D/Andar_2/D_Corredor_Esquerda_Meio.jpg",
-    hotspot: [
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(1, -4.5, 5),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d204",
-      },
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(1.25, -4, -5),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d205",
-      },
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(27, -6, 7),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d206",
-      },
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(27, -6, -4),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d207",
-      },
-      {
-        image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(-27.5, -2, -2.5),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d_corredor_esquerda_cmc",
-      }
-    ],
-  },
   d204: {
     image: "/images/Bloco_D/Andar_2/D_207.jpg",
     hotspot: [
@@ -355,9 +374,9 @@ export const scenesData = {
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(-30, -2, 6.5),
+        position: new THREE.Vector3(-30, -5.75, 6.5),
         scale: new THREE.Vector3(0.12, 0.12, 1),
-        targetScene: "d208",
+        targetScene: "d_corredor_esquerda_meio3",
       },
     ]  
   },
@@ -366,13 +385,14 @@ export const scenesData = {
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",
-        position: new THREE.Vector3(-30, -2, 6.5),
+        position: new THREE.Vector3(-30, -7, 11.25),
         scale: new THREE.Vector3(0.12, 0.12, 1),
-        targetScene: "d208",
+        targetScene: "d_corredor_esquerda_meio3",
       },
     ]  
   },
-  corredor_direita_cmc: {
+
+  /*corredor_direita_cmc: {
     image: "/images/Bloco_D/Andar_2/D_Corredor_Direita_cmc.jpg",
     hotspot: [
       {
@@ -382,6 +402,78 @@ export const scenesData = {
         targetScene: "d208",
       },
     ]  
+  },*/
+  // ACHO Q ESSA CENA JA EXISTE, N SEI
+
+  entrada_blocos_abc: {
+    image: "/images/Exterior/Cantina.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "entrada_blocos",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(0, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre_esquerda",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(15, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre_direita",
+      }
+    ],
   },
-  // TODO tem que melhorar esse nome lado quadra é fodakkkk
+  torre_esquerda: {
+    image: "/images/Exterior/Cantina.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "entrada_blocos",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(0, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre_esquerda",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(15, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre_direita",
+      }
+    ],
+  },
+  torre_direita: {
+    image: "/images/Exterior/Cantina.jpg",
+    hotspot: [
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(30, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "entrada_blocos",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(0, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre_esquerda",
+      },
+      {
+        image: "/images/Utilitários/hotspot.png",
+        position: new THREE.Vector3(15, -2, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre_direita",
+      }
+    ],
+  },
+
+  // TODO tem que melhorar esse nome
 };

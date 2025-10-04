@@ -67,7 +67,7 @@ scene.children.filter((obj) => obj.userData?.targetScene && obj.userData.enabled
 
       if (!hotspot.userData.hoverMaterial) {
         const textureHover = new THREE.TextureLoader().load(
-          "/images/Utilitários/hotspot_branco.png"
+          "/images/Utilitários/hotspot_branco.svg"
         );
         hotspot.userData.hoverMaterial = new THREE.MeshBasicMaterial({
           map: textureHover,

@@ -188,7 +188,7 @@ export const scenesData = {
         image: "/images/Utilitários/hotspot.png",
         position: new THREE.Vector3(27, -6, 7),
         scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "d206",
+        targetScene: "d_multimidia",
       },
       {
         image: "/images/Utilitários/hotspot.png",
@@ -336,8 +336,8 @@ export const scenesData = {
       },
     ],
   },
-  d206: {
-    image: "/images/Bloco_D/Andar_2/D_207.jpg",
+  d_multimidia: {
+    image: "",
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.png",

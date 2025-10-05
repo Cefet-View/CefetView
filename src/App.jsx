@@ -1,12 +1,8 @@
 import "./App.css";
-import ThreeScene from "./components/threeScene";
+import Rotas from "./routes/Rotas";
 
 function App() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative">
-      <ThreeScene />
-    </div>
-  );
+  return <Rotas />;
 }
 
 export default App;

@@ -1,7 +1,5 @@
 import * as THREE from "three";
 
-// TODO adicionar novos cenários e arrumar os hotspots
-
 // Definição dos cenários
 export const scenesData = {
   entradaescola: {
@@ -35,7 +33,7 @@ export const scenesData = {
         position: new THREE.Vector3(40, 0, -1),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entradaescola",
-      }
+      },
     ],
   },
   entradaquadra: {
@@ -103,7 +101,7 @@ export const scenesData = {
         position: new THREE.Vector3(-25, -2, 1.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entrada_blocos_abc",
-      }
+      },
     ],
   },
   entrada_bloco_d: {
@@ -111,16 +109,16 @@ export const scenesData = {
     hotspot: [
       {
         image: "/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(-6, -2, 0.25),
+        position: new THREE.Vector3(-20, 2.5, 1),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
       },
-       {
+      {
         image: "/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(25, -2, -2),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entrada_blocos",
-      }
+      },
     ],
   },
   d_escada_andar2: {
@@ -149,7 +147,7 @@ export const scenesData = {
         position: new THREE.Vector3(16, 2.6, -4),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar3",
-      }
+      },
     ],
   },
   d_corredor_esquerda_cmc: {
@@ -166,7 +164,7 @@ export const scenesData = {
         position: new THREE.Vector3(0.5, -3, 20),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
-      }
+      },
     ],
   },
   d_corredor_esquerda_meio: {
@@ -201,7 +199,7 @@ export const scenesData = {
         position: new THREE.Vector3(-27.5, -2, -2.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_cmc",
-      }
+      },
     ],
   },
   d_corredor_direita_cmc: {
@@ -213,7 +211,6 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
       },
-
     ],
   },
   d_escada_andar3: {
@@ -236,7 +233,7 @@ export const scenesData = {
         position: new THREE.Vector3(-1.5, -3, 18),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_cmc3",
-      }
+      },
     ],
   },
   d_corredor_direita_cmc3: {
@@ -253,7 +250,7 @@ export const scenesData = {
         position: new THREE.Vector3(30, -3, 0.25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_direita_meio3",
-      }
+      },
     ],
   },
   d_corredor_direita_meio3: {
@@ -264,7 +261,7 @@ export const scenesData = {
         position: new THREE.Vector3(30, -3, -0.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_direita_cmc3",
-      }
+      },
     ],
   },
   d_corredor_esquerda_cmc3: {
@@ -281,7 +278,7 @@ export const scenesData = {
         position: new THREE.Vector3(30, -3, -1),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_meio3",
-      }
+      },
     ],
   },
   d_corredor_esquerda_meio3: {
@@ -311,9 +308,8 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d312",
       },
-      
     ],
-  },  
+  },
   d204: {
     image: "/images/Bloco_D/Andar_2/D_207.jpg",
     hotspot: [
@@ -378,7 +374,7 @@ export const scenesData = {
         scale: new THREE.Vector3(0.12, 0.12, 1),
         targetScene: "d_corredor_esquerda_meio3",
       },
-    ]  
+    ],
   },
   d310: {
     image: "/images/Bloco_D/Andar_3/D_310.jpg",
@@ -389,7 +385,7 @@ export const scenesData = {
         scale: new THREE.Vector3(0.12, 0.12, 1),
         targetScene: "d_corredor_esquerda_meio3",
       },
-    ]  
+    ],
   },
 
   /*corredor_direita_cmc: {
@@ -425,7 +421,7 @@ export const scenesData = {
         position: new THREE.Vector3(15, -2, 0),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre_direita",
-      }
+      },
     ],
   },
   torre_esquerda: {
@@ -448,7 +444,7 @@ export const scenesData = {
         position: new THREE.Vector3(15, -2, 0),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre_direita",
-      }
+      },
     ],
   },
   torre_direita: {
@@ -471,7 +467,7 @@ export const scenesData = {
         position: new THREE.Vector3(15, -2, 0),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre_direita",
-      }
+      },
     ],
   },
 

@@ -69,7 +69,7 @@ export function setupInteraction(
 
       if (!hotspot.userData.hoverMaterial) {
         const textureHover = new THREE.TextureLoader().load(
-          "/images/Utilitários/hotspot_branco.svg"
+          "/CefetView/images/Utilitários/hotspot_branco.svg"
         );
         hotspot.userData.hoverMaterial = new THREE.MeshBasicMaterial({
           map: textureHover,

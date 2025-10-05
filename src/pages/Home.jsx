@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 import Footer from "../components/home/footer.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -26,14 +27,14 @@ export default function Home() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="flex items-center justify-between h-24 px-8 sm:px-16 w-full fixed top-0 left-0 rounded-b-3xl bg-white shadow-lg z-50"
       >
-        <motion.h1
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="ml-2 sm:ml-8 text-4xl sm:text-6xl font-extrabold tracking-tight drop-shadow text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-900"
+        <ScrollLink
+          to="hero"
+          smooth={true}
+          duration={500}
+          className="ml-2 sm:ml-8 text-4xl sm:text-6xl cursor-pointer font-extrabold tracking-tight drop-shadow text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-blue-900"
         >
           CEFET VIEW
-        </motion.h1>
+        </ScrollLink>
 
         <motion.nav
           initial={{ opacity: 0, x: 40 }}
@@ -41,15 +42,38 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="hidden sm:flex gap-6 sm:gap-10 text-lg sm:text-xl font-bold items-center m-2 sm:m-6 text-blue-800"
         >
-          <a href="#sobre" className="hover:text-blue-600 transition">
+          <ScrollLink
+            to="sobre"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 transition cursor-pointer"
+          >
             Sobre
-          </a>
-          <a href="#recursos" className="hover:text-blue-600 transition">
+          </ScrollLink>
+          <ScrollLink
+            to="inspiracoes"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 transition cursor-pointer"
+          >
+            Inspirações
+          </ScrollLink>
+          <ScrollLink
+            to="recursos"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 transition cursor-pointer"
+          >
             Recursos
-          </a>
-          <a href="#contatos" className="hover:text-blue-600 transition">
+          </ScrollLink>
+          <ScrollLink
+            to="contatos"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 transition cursor-pointer"
+          >
             Contatos
-          </a>
+          </ScrollLink>
           <a
             href="https://github.com/Cefet-View/CefetView"
             target="_blank"
@@ -63,6 +87,7 @@ export default function Home() {
       <main>
         {/* Hero */}
         <motion.section
+          id="hero"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -78,7 +103,7 @@ export default function Home() {
             viewBox="0 0 544 617"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="mt-8"
+            className="mt-8 hidden sm:block"
           >
             <path
               d="M138.473 153.268H0L192.873 0L138.473 153.268Z"
@@ -103,7 +128,6 @@ export default function Home() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center"
-            onClick={() => navigate("/tour")}
           >
             <h1 className="text-6xl sm:text-7xl font-extrabold text-white mt-8 drop-shadow-lg">
               Uma nova forma de <br /> conhecer o campus
@@ -117,7 +141,8 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.15 }}
-              className="mt-6 group relative bg-white text-blue-600 font-extrabold text-2xl sm:text-3xl py-4 px-12 rounded-2xl shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl overflow-hidden"
+              onClick={() => navigate("/tour")}
+              className="mt-6 group relative bg-white text-blue-600 font-extrabold cursor-pointer text-2xl sm:text-3xl py-4 px-12 rounded-2xl shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl overflow-hidden"
             >
               Iniciar Tour
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-blue-700/20 to-transparent skew-x-12"></div>
@@ -175,19 +200,19 @@ export default function Home() {
                   title: "CEFET-MG Leopoldina",
                   desc: "Tour virtual do CEFET-MG, uma referência nacional em experiências digitais educacionais.",
                   link: "https://tour.linceonline.com.br",
-                  img: "/images/home/cefetmg.png", // Substitua pela imagem
+                  img: "/CefetView/images/home/cefetmg.png", // Substitua pela imagem
                 },
                 {
                   title: "Museu do Louvre",
                   desc: "Tour virtual internacional do Louvre, inspirando exploração imersiva e acessível.",
                   link: "https://www.louvre.fr/visites-en-ligne/petitegalerie/saison6/",
-                  img: "/images/home/louvre.png", // Substitua pela imagem
+                  img: "/CefetView/images/home/louvre.png", // Substitua pela imagem
                 },
                 {
                   title: "Museu de História Natural",
                   desc: "Tour Virtual do Museu da Histório Natural.",
                   link: "https://naturalhistory2.si.edu/vt3/NMNH/?startscene=21&startactions=lookat(-62.93,-20.5,120,0,0);",
-                  img: "/images/home/museuhistorianatural.png", // Substitua pela imagem
+                  img: "/CefetView/images/home/museuhistorianatural.png", // Substitua pela imagem
                 },
               ].map((item, i) => (
                 <motion.a

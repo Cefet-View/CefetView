@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+// TODO adicionar novos cenários e arrumar os hotspots
+
 // Definição dos cenários
 export const scenesData = {
   entradaescola: {
@@ -33,7 +35,7 @@ export const scenesData = {
         position: new THREE.Vector3(40, 0, -1),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entradaescola",
-      },
+      }
     ],
   },
   entradaquadra: {
@@ -101,7 +103,7 @@ export const scenesData = {
         position: new THREE.Vector3(-25, -2, 1.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entrada_blocos_abc",
-      },
+      }
     ],
   },
   entrada_bloco_d: {
@@ -109,16 +111,16 @@ export const scenesData = {
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(-20, 2.5, 1),
+        position: new THREE.Vector3(-6, -2, 0.25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
       },
-      {
+       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(25, -2, -2),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "entrada_blocos",
-      },
+      }
     ],
   },
   d_escada_andar2: {
@@ -147,7 +149,7 @@ export const scenesData = {
         position: new THREE.Vector3(16, 2.6, -4),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar3",
-      },
+      }
     ],
   },
   d_corredor_esquerda_cmc: {
@@ -164,7 +166,7 @@ export const scenesData = {
         position: new THREE.Vector3(0.5, -3, 20),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
-      },
+      }
     ],
   },
   d_corredor_esquerda_meio: {
@@ -199,7 +201,7 @@ export const scenesData = {
         position: new THREE.Vector3(-27.5, -2, -2.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_cmc",
-      },
+      }
     ],
   },
   d_corredor_direita_cmc: {
@@ -211,6 +213,7 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_escada_andar2",
       },
+
     ],
   },
   d_escada_andar3: {
@@ -233,7 +236,7 @@ export const scenesData = {
         position: new THREE.Vector3(-1.5, -3, 18),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_cmc3",
-      },
+      }
     ],
   },
   d_corredor_direita_cmc3: {
@@ -250,18 +253,24 @@ export const scenesData = {
         position: new THREE.Vector3(30, -3, 0.25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_direita_meio3",
-      },
+      }
     ],
   },
   d_corredor_direita_meio3: {
-    image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Direita.jpg",
+    image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Direita_meio.jpg",
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(30, -3, -0.5),
+        position: new THREE.Vector3(30, -3, 1.25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_direita_cmc3",
       },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(30, -3, 1.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "d310",
+      }
     ],
   },
   d_corredor_esquerda_cmc3: {
@@ -278,11 +287,11 @@ export const scenesData = {
         position: new THREE.Vector3(30, -3, -1),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d_corredor_esquerda_meio3",
-      },
+      }
     ],
   },
   d_corredor_esquerda_meio3: {
-    image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Esquerda.jpg",
+    image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Esquerda_meio.jpg",
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -308,10 +317,11 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "d312",
       },
+      
     ],
-  },
+  },  
   d204: {
-    image: "/CefetView/images/Bloco_D/Andar_2/D_207.jpg",
+    image: "",
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -374,7 +384,7 @@ export const scenesData = {
         scale: new THREE.Vector3(0.12, 0.12, 1),
         targetScene: "d_corredor_esquerda_meio3",
       },
-    ],
+    ]  
   },
   d310: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_310.jpg",
@@ -385,7 +395,7 @@ export const scenesData = {
         scale: new THREE.Vector3(0.12, 0.12, 1),
         targetScene: "d_corredor_esquerda_meio3",
       },
-    ],
+    ]  
   },
 
   /*corredor_direita_cmc: {
@@ -412,19 +422,127 @@ export const scenesData = {
       },
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(0, -2, 0),
+        position: new THREE.Vector3(0, -2, -30),
         scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "torre_esquerda",
+        targetScene: "patio",
       },
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(15, -2, 0),
+        position: new THREE.Vector3(-6, -2, 20),
         scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "torre_direita",
+        targetScene: "torre1_andar1",
+      }
+    ],
+  },
+  patio: {
+    image: "/CefetView/images/Exterior/patio.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-11, -2, -12),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "refeitorio",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-25, -2, 12),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "labs_idiomas",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(10, -2, -1),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "entrada_blocos_abc",
+      }
+    ],
+  },
+  refeitorio: {
+    image: "/CefetView/images/Exterior/Refeitorio.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(10, -2, -12),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "patio",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(0, -2, 25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar1",
+      }
+    ],
+  },
+  labs_idiomas: {
+    image: "/CefetView/images/Exterior/labs_idiomas.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(17, -2, 17),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "patio",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(1.5, -2, -10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar1",
+      }
+    ],
+  },
+  torre2_andar1: {
+    image: "/CefetView/images/Exterior/Torre2_andar1.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -2, -2),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "labs_idiomas",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-7, -2, -5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "refeitorio",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(2, 3, 12),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar2",
+      }
+    ],
+  },
+  torre2_andar2: {
+    image: "/CefetView/images/Bloco_C/Andar_2/Torre2_andar2.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-10, -5.5, 3),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-12, 2.9, -2.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar3",
+      }
+    ],
+  },
+  torre2_andar3: {
+    image: "/CefetView/images/Bloco_C/Andar_3/Torre2_andar3.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(0, -8, -13),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar2",
       },
     ],
   },
-  torre_esquerda: {
+  torre1_andar1: {
     image: "/CefetView/images/Exterior/Cantina.jpg",
     hotspot: [
       {
@@ -444,32 +562,9 @@ export const scenesData = {
         position: new THREE.Vector3(15, -2, 0),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre_direita",
-      },
+      }
     ],
   },
-  torre_direita: {
-    image: "/CefetView/images/Exterior/Cantina.jpg",
-    hotspot: [
-      {
-        image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(30, -2, 0),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "entrada_blocos",
-      },
-      {
-        image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(0, -2, 0),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "torre_esquerda",
-      },
-      {
-        image: "/CefetView/images/Utilitários/hotspot.svg",
-        position: new THREE.Vector3(15, -2, 0),
-        scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "torre_direita",
-      },
-    ],
-  },
-
+  
   // TODO tem que melhorar esse nome
 };

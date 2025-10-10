@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { scenesData } from "../../utils/scenesData.js";
 import { IoSearch } from "react-icons/io5";
+import toast from "react-hot-toast";
 
 export default function SearchButton({ onSearch }) {
   const [pesquisa, setPesquisa] = useState("");
 
   const procurarCena = () => {
-    // Procurar por chave do dicionario ou imagem que combine com o texto escrito
     const chaveEncontrada = Object.keys(scenesData).find((chave) => {
       return (
         chave.toLowerCase().includes(pesquisa.trim().toLowerCase()) ||
@@ -17,10 +17,10 @@ export default function SearchButton({ onSearch }) {
     });
 
     if (chaveEncontrada) {
-      onSearch(chaveEncontrada); // Troca a imagem
-      alert("imagem achada, repito imagem achada");
+      onSearch(chaveEncontrada);
+      toast.success("Local encontrado com sucesso!");
     } else {
-      alert("Cena não encontrada.");
+      toast.error("Local não encontrado.");
     }
   };
 

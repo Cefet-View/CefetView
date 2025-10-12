@@ -636,6 +636,18 @@ export const scenesData = {
         position: new THREE.Vector3(10, -4, -2.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre1_andar3",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-10, -4, 1.75),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(18, -4, 1.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_oeste_1",
       }
     ],
   },
@@ -645,6 +657,119 @@ export const scenesData = {
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(0.5, -7, -10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre1_andar2",
+      }
+    ],
+  },
+  A2_corredor_leste_1: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_1.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(0, -2, 10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre1_andar2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(18, -2, -5.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_2",
+      }
+    ],
+  },
+  A2_corredor_leste_2: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_2.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(30, -1.5, 1.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-19, -1.5, -0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_3",
+      }
+    ],
+  },
+  A2_corredor_leste_3: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_3.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(18, -1.5, 1.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-2, -1.5, 5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_lab",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-19, -1.5, -0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_4",
+      }
+    ],
+  },
+  A2_corredor_leste_4: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_4.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(20, -1.5, -0.15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_3",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-24, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_5",
+      }
+    ],
+  },
+  A2_corredor_leste_5: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_5.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-13.5, -1.5, 15 ),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_4",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(17, 8, 10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "",
+      }
+    ],
+  },
+  A2_corredor_leste_lab: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_lab.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(4, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_3",
+      }
+    ],
+  },
+  A2_corredor_oeste_1: {
+    image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_oeste_1.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-1, -1.5, -11),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre1_andar2",
       }

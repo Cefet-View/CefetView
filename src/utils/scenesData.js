@@ -816,6 +816,12 @@ export const scenesData = {
         position: new THREE.Vector3(17, -1.5, 5.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "B2_corredor_leste_2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-17, -0.75, 3.15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C2_corredor_leste_1",
       }
     ],
   },
@@ -1010,6 +1016,42 @@ export const scenesData = {
         position: new THREE.Vector3(13, -0.75, -1),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "A2_corredor_oeste_1",
+      }
+    ],
+  },
+  C2_corredor_leste_1: {
+    image: "/CefetView/images/Bloco_C/Andar_2/C2_corredor_leste_1.jpg",
+    //porta de cima do auditório
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(20, -1.5, 0.15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-13, 1, 0.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C3_corredor_oeste_1",
+      }
+    ],
+  },
+  C3_corredor_oeste_1: {
+    image: "/CefetView/images/Bloco_C/Andar_3/C3_corredor_oeste_1.jpg",
+    //em frente à biblioteca (porta de vidro)
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(20, -1.5, 0.15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-13, 1, 0.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C2_corredor_leste_1",
       }
     ],
   },

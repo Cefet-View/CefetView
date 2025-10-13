@@ -585,6 +585,18 @@ export const scenesData = {
         position: new THREE.Vector3(-12, 2.9, -2.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre2_andar3",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-12, 2.9, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-12, 2.9, -5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_2",
       }
     ],
   },
@@ -662,6 +674,7 @@ export const scenesData = {
       }
     ],
   },
+  // Bloco A Andar 2 
   A2_corredor_leste_1: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_1.jpg",
     hotspot: [
@@ -676,7 +689,14 @@ export const scenesData = {
         position: new THREE.Vector3(18, -2, -5.5),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "A2_corredor_leste_2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-16, -2, -4),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_5",
       }
+      
     ],
   },
   A2_corredor_leste_2: {
@@ -772,6 +792,224 @@ export const scenesData = {
         position: new THREE.Vector3(-1, -1.5, -11),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "torre1_andar2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-15, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_5",
+      }
+    ],
+  },
+  // Bloco B Andar 2
+  B2_corredor_leste_1: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_1.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-1, -1.5, 10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "torre2_andar2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(17, -1.5, 5.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_2",
+      }
+    ],
+  },
+  B2_corredor_leste_2: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_2.jpg",
+    //a foto originalmente se chamava B212, agora esta como B2_corredor_leste_2
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-15, -1.5, 2),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_3",
+      }
+    ],
+  },
+  B2_corredor_leste_3: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_3.jpg",
+    //em frente ao gabinete da direção
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-1, -1.5, 15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(6, 0, -15),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_meio",
+      }
+    ],
+  },
+  /*
+  Na porta à direita do gabinete da direção temos a gerência acadêmica (essas duas portas podem ser vistas claramente da cena B2_corredor_leste_3), porém, entre a cena B2_meio e a cena B2_corredor_leste_3 ainda há duas salas que não podem ser vistas nitidamente e que vale destacar, são elas: gerência administrativa e divisão de almoxarifado e patrimômio - DIVAP (de acordo com a planta)
+  */
+  B2_meio: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_meio.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-10, -2, -9.75),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_3",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(7, -2, -11),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_4",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-9.5, -2, 14),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_4",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(10.5, -2, 10.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_5",
+      }
+    ],
+  },
+  B2_corredor_leste_4: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_4.jpg",
+    //a foto originalmente se chamava Frente B214, agora está como B2_corredor_leste_4
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-15, -1.15, 5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_meio",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_5",
+      }
+    ],
+  },
+  B2_corredor_leste_5: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_5.jpg",
+    //a foto originalmente se chamava sala dos professores, agora está como B2_corredor_leste_5
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-15, -1.5, -0.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_leste_4",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_leste_1",
+      }
+    ],
+  },
+  B2_corredor_oeste_1: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_1.jpg",
+    //a foto originalmente se chamava Lab redes, agora está como B2_corredor_oeste_1
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(14, -2, 2),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_2",
+      }
+    ],
+  },
+  B2_corredor_oeste_2: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_2.jpg",
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-13, -1.5, 4.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_1",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -1.5, 2.5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_3",
+      }
+    ],
+  },
+  B2_corredor_oeste_3: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_3.jpg",
+    /*a foto originalmente se chamava B211, agora está como B2_corredor_oeste_3.
+    a B211 é a sala de subprefeitura / infraestrutura
+    */
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-13, -1.5, 1),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_2",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -1.5, 0),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_4",
+      }
+    ],
+  },  
+  B2_corredor_oeste_4: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_4.jpg",
+    /*a foto originalmente se chamava "frente b207 e b209", agora está como B2_corredor_oeste_4.
+    a B209 é a sala dos professores de enfermagem
+    a B207 é o setor de administração e compras - SEACO
+    */
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-13, -1.5, 0.25),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_3",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -0.75, -6),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_meio",
+      }
+    ],
+  },
+  B2_corredor_oeste_5: {
+    image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_5.jpg",
+    /*a foto originalmente se chamava Saped, agora está como B2_corredor_oeste_5.
+    é em frente a sala B201, que é a coordenação do ensino médio, técnico e graduação
+    */
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-20, -0.5, -4),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_meio",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(13, -0.75, -1),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "A2_corredor_oeste_1",
       }
     ],
   },

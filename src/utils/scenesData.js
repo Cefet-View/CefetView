@@ -1,11 +1,13 @@
 import * as THREE from "three";
 
 // TODO adicionar novos cenários e arrumar os hotspots
-
+// pesquisavel: 1 = sim, 0 = não
+// se quiser pode mudar, caso ache que uma imagem deve ser pesquisavel.
 // Definição dos cenários
 export const scenesData = {
   entradaescola: {
     image: "images/Exterior/Entrada_Escola.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -17,6 +19,7 @@ export const scenesData = {
   },
   entradameioescola: {
     image: "/CefetView/images/Exterior/Entrada_Meio_Escola.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -40,6 +43,7 @@ export const scenesData = {
   },
   entradaquadra: {
     image: "/CefetView/images/Exterior/Entrada_Quadra.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -57,6 +61,7 @@ export const scenesData = {
   },
   ladoquadra: {
     image: "/CefetView/images/Exterior/Lado_quadra.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -68,6 +73,7 @@ export const scenesData = {
   },
   entradafimescola: {
     image: "/CefetView/images/Exterior/Entrada_Fim_Escola.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -85,6 +91,7 @@ export const scenesData = {
   },
   entrada_blocos: {
     image: "/CefetView/images/Exterior/Entrada_Blocos.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -108,6 +115,7 @@ export const scenesData = {
   },
   entrada_bloco_d: {
     image: "/CefetView/images/Bloco_D/Andar_1/Entrada.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -125,6 +133,7 @@ export const scenesData = {
   },
   d_escada_andar2: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_Escada.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -154,6 +163,7 @@ export const scenesData = {
   },
   d_corredor_esquerda_cmc: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_Corredor_Esquerda_cmc.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -171,6 +181,7 @@ export const scenesData = {
   },
   d_corredor_esquerda_meio: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_Corredor_Esquerda_Meio.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -206,6 +217,7 @@ export const scenesData = {
   },
   d_corredor_direita_cmc: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_Corredor_Direita_cmc.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -218,6 +230,7 @@ export const scenesData = {
   },
   d_escada_andar3: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_Escada.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -241,6 +254,7 @@ export const scenesData = {
   },
   d_corredor_direita_cmc3: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Direita_cmc.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -258,6 +272,7 @@ export const scenesData = {
   },
   d_corredor_direita_meio3: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Direita_meio.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -275,6 +290,7 @@ export const scenesData = {
   },
   d_corredor_esquerda_cmc3: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Esquerda_cmc.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -292,6 +308,7 @@ export const scenesData = {
   },
   d_corredor_esquerda_meio3: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_Corredor_Esquerda_meio.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -322,6 +339,7 @@ export const scenesData = {
   },  
   d204: {
     image: "",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -333,6 +351,7 @@ export const scenesData = {
   },
   d205: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_205.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -344,6 +363,7 @@ export const scenesData = {
   },
   d_multimidia: {
     image: "",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -355,6 +375,7 @@ export const scenesData = {
   },
   d207: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_207.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -366,6 +387,7 @@ export const scenesData = {
   },
   d208: {
     image: "/CefetView/images/Bloco_D/Andar_2/D_208.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -377,6 +399,7 @@ export const scenesData = {
   },
   d308: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_308.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -388,6 +411,7 @@ export const scenesData = {
   },
   d310: {
     image: "/CefetView/images/Bloco_D/Andar_3/D_310.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -413,6 +437,7 @@ export const scenesData = {
 
   entrada_blocos_abc: {
     image: "/CefetView/images/Exterior/Cantina.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -442,6 +467,7 @@ export const scenesData = {
   },
   patio: {
     image: "/CefetView/images/Exterior/patio.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -465,6 +491,7 @@ export const scenesData = {
   },
   refeitorio: {
     image: "/CefetView/images/Exterior/Refeitorio.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -482,6 +509,7 @@ export const scenesData = {
   },
   labs_idiomas: {
     image: "/CefetView/images/Exterior/labs_idiomas.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -499,6 +527,7 @@ export const scenesData = {
   },
   frente_b112: {
     image: "/CefetView/images/Exterior/Porta_b112.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -516,6 +545,7 @@ export const scenesData = {
   },
   secretaria: {
     image: "/CefetView/images/Exterior/Secretaria.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -533,6 +563,7 @@ export const scenesData = {
   },
   gremio: {
     image: "/CefetView/images/Exterior/Gremio.jpg",
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -550,6 +581,7 @@ export const scenesData = {
   },
   torre2_andar1: {
     image: "/CefetView/images/Exterior/Torre2_andar1.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -573,6 +605,7 @@ export const scenesData = {
   },
   torre2_andar2: {
     image: "/CefetView/images/Bloco_C/Andar_2/Torre2_andar2.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -602,6 +635,7 @@ export const scenesData = {
   },
   torre2_andar3: {
     image: "/CefetView/images/Bloco_C/Andar_3/Torre2_andar3.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -613,6 +647,7 @@ export const scenesData = {
   },
   torre1_andar1: {
     image: "/CefetView/images/Exterior/Torre1_andar1.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -636,6 +671,7 @@ export const scenesData = {
   },
   torre1_andar2: {
     image: "/CefetView/images/Bloco_A/Andar_2/Torre1_andar2.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -665,6 +701,7 @@ export const scenesData = {
   },
   torre1_andar3: {
     image: "/CefetView/images/Bloco_A/Andar_3/Torre1_andar3.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -674,9 +711,10 @@ export const scenesData = {
       }
     ],
   },
-  // Bloco A Andar 2 
+  // Bloco A Andar 2
   A2_corredor_leste_1: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_1.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -701,6 +739,7 @@ export const scenesData = {
   },
   A2_corredor_leste_2: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_2.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -718,6 +757,7 @@ export const scenesData = {
   },
   A2_corredor_leste_3: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_3.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -741,6 +781,7 @@ export const scenesData = {
   },
   A2_corredor_leste_4: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_4.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -758,6 +799,7 @@ export const scenesData = {
   },
   A2_corredor_leste_5: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_5.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -775,6 +817,7 @@ export const scenesData = {
   },
   A2_corredor_leste_lab: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_leste_lab.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -786,6 +829,7 @@ export const scenesData = {
   },
   A2_corredor_oeste_1: {
     image: "/CefetView/images/Bloco_A/Andar_2/A2_corredor_oeste_1.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -804,6 +848,7 @@ export const scenesData = {
   // Bloco B Andar 2
   B2_corredor_leste_1: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_1.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -827,6 +872,7 @@ export const scenesData = {
   },
   B2_corredor_leste_2: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_2.jpg",
+    pesquisavel: 0,
     //a foto originalmente se chamava B212, agora esta como B2_corredor_leste_2
     hotspot: [
       {
@@ -845,6 +891,7 @@ export const scenesData = {
   },
   B2_corredor_leste_3: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_3.jpg",
+    pesquisavel: 0,
     //em frente ao gabinete da direção
     hotspot: [
       {
@@ -866,6 +913,7 @@ export const scenesData = {
   */
   B2_meio: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_meio.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -895,6 +943,7 @@ export const scenesData = {
   },
   B2_corredor_leste_4: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_4.jpg",
+    pesquisavel: 0,
     //a foto originalmente se chamava Frente B214, agora está como B2_corredor_leste_4
     hotspot: [
       {
@@ -913,6 +962,7 @@ export const scenesData = {
   },
   B2_corredor_leste_5: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_leste_5.jpg",
+    pesquisavel: 0,
     //a foto originalmente se chamava sala dos professores, agora está como B2_corredor_leste_5
     hotspot: [
       {
@@ -931,6 +981,7 @@ export const scenesData = {
   },
   B2_corredor_oeste_1: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_1.jpg",
+    pesquisavel: 0,
     //a foto originalmente se chamava Lab redes, agora está como B2_corredor_oeste_1
     hotspot: [
       {
@@ -943,6 +994,7 @@ export const scenesData = {
   },
   B2_corredor_oeste_2: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_2.jpg",
+    pesquisavel: 0,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -960,6 +1012,7 @@ export const scenesData = {
   },
   B2_corredor_oeste_3: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_3.jpg",
+    pesquisavel: 0,
     /*a foto originalmente se chamava B211, agora está como B2_corredor_oeste_3.
     a B211 é a sala de subprefeitura / infraestrutura
     */
@@ -980,6 +1033,7 @@ export const scenesData = {
   },  
   B2_corredor_oeste_4: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_4.jpg",
+    pesquisavel: 0,
     /*a foto originalmente se chamava "frente b207 e b209", agora está como B2_corredor_oeste_4.
     a B209 é a sala dos professores de enfermagem
     a B207 é o setor de administração e compras - SEACO
@@ -1001,6 +1055,7 @@ export const scenesData = {
   },
   B2_corredor_oeste_5: {
     image: "/CefetView/images/Bloco_B/Andar_2/B2_corredor_oeste_5.jpg",
+    pesquisavel: 0,
     /*a foto originalmente se chamava Saped, agora está como B2_corredor_oeste_5.
     é em frente a sala B201, que é a coordenação do ensino médio, técnico e graduação
     */
@@ -1021,6 +1076,7 @@ export const scenesData = {
   },
   C2_corredor_leste_1: {
     image: "/CefetView/images/Bloco_C/Andar_2/C2_corredor_leste_1.jpg",
+    pesquisavel: 0,
     //porta de cima do auditório
     hotspot: [
       {
@@ -1039,6 +1095,7 @@ export const scenesData = {
   },
   C3_corredor_oeste_1: {
     image: "/CefetView/images/Bloco_C/Andar_3/C3_corredor_oeste_1.jpg",
+    pesquisavel: 0,
     //em frente à biblioteca (porta de vidro)
     hotspot: [
       {

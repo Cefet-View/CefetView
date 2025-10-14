@@ -5,6 +5,8 @@ import SceneButton from "./sceneButton.jsx";
 import { loadScene } from "../../utils/sceneLoader.js";
 import SearchButton from "./searchButton.jsx";
 import MenuButton from "./menuButton.jsx";
+import TutorialButton from "./tutorialButton.jsx";
+import TutorialModal from "./tutorialModal.jsx";
 
 export default function InitialPage({
   scene,
@@ -17,6 +19,7 @@ export default function InitialPage({
   const [botaoSelecionado, setBotaoSelecionado] = useState("Inicial");
   const [moviment, setMoviment] = useState(false);
   const [show, setShow] = useState(true);
+  const [tutorialAberto, setTutorialAberto] = useState(false);
 
   const botoes = {
     Inicial: "entradaescola",
@@ -143,6 +146,16 @@ export default function InitialPage({
 
       {/* Botão de Menu */}
       <MenuButton onClick={alternarMenu} />
+      <TutorialButton onClick={() => setTutorialAberto(true)} />
+
+<TutorialModal
+  isOpen={tutorialAberto}
+  onClose={() => setTutorialAberto(false)}
+  gifs={[
+    { title: "Movimentar câmera", src: "/gifs/movimento.gif" },
+    { title: "Trocar de cena", src: "/gifs/troca.gif" },
+  ]}
+/>
     </>
   );
 }

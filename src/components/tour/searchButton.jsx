@@ -7,12 +7,19 @@ export default function SearchButton({ onSearch }) {
   const [pesquisa, setPesquisa] = useState("");
 
   const procurarCena = () => {
+    const termo = pesquisa.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+;
+
     const chaveEncontrada = Object.keys(scenesData).find((chave) => {
+      const cena = scenesData[chave];
+
+      // Ignora cenas que não são pesquisáveis
+      if (cena.pesquisavel === 0) return false;
+
+      
       return (
-        chave.toLowerCase().includes(pesquisa.trim().toLowerCase()) ||
-        scenesData[chave].image
-          .toLowerCase()
-          .includes(pesquisa.trim().toLowerCase())
+        chave.toLowerCase().includes(termo) ||
+        cena.image.toLowerCase().includes(termo)
       );
     });
 
@@ -20,7 +27,7 @@ export default function SearchButton({ onSearch }) {
       onSearch(chaveEncontrada);
       toast.success("Local encontrado com sucesso!");
     } else {
-      toast.error("Local não encontrado.");
+      toast.error("Local não encontrado ou não pesquisável.");
     }
   };
 
@@ -32,9 +39,10 @@ export default function SearchButton({ onSearch }) {
       <IoSearch size={24} className="text-gray-600" />
       <input
         type="text"
-        placeholder="Digite o local desejado..."
+        placeholder="Digite o local desejado"
         value={pesquisa}
         onChange={(x) => setPesquisa(x.target.value)}
+        onKeyDown={(e) => e.key === "Enter" && procurarCena()}
         className="flex-grow outline-none font-medium"
       />
       <button

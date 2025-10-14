@@ -7,16 +7,17 @@ export default function SearchButton({ onSearch }) {
   const [pesquisa, setPesquisa] = useState("");
 
   const procurarCena = () => {
-    const termo = pesquisa.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-;
-
+    const termo = pesquisa
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
     const chaveEncontrada = Object.keys(scenesData).find((chave) => {
       const cena = scenesData[chave];
 
       // Ignora cenas que não são pesquisáveis
       if (cena.pesquisavel === 0) return false;
 
-      
       return (
         chave.toLowerCase().includes(termo) ||
         cena.image.toLowerCase().includes(termo)
@@ -54,7 +55,7 @@ export default function SearchButton({ onSearch }) {
           transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
           transform active:scale-95 hover:shadow-[0_12px_25px_-4px_rgba(59,130,246,0.5)]
           shadow-[0_8px_20px_-4px_rgba(59,130,246,0.4)]
-          before:absolute before:inset-0  overflow-hidden
+          before:absolute before:inset-0  overflow-hidden cursor-pointer
           before:bg-gradient-to-r before:from-white/20 before:to-white/10
           before:translate-x-[-100%] before:transition-transform before:duration-500
           hover:before:translate-x-[100%] before:skew-x-12"

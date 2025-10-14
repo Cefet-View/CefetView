@@ -23,9 +23,9 @@ export default function InitialPage({
 
   const botoes = {
     Inicial: "entradaescola",
-    "Bloco A": "entrada_blocos_abc",
+    "Bloco A": "torre2_andar1",
     "Bloco B": "entrada_blocos_abc",
-    "Bloco C": "entradaescola",
+    "Bloco C": "torre1_andar1",
     "Bloco D": "entrada_bloco_d",
   };
 
@@ -109,7 +109,7 @@ export default function InitialPage({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="group relative bg-gradient-to-r from-blue-600 to-blue-800 text-white font-extrabold text-4xl py-6 px-20 rounded-2xl shadow-lg
-            transition duration-300 ease-in-out transform hover:shadow-blue-500/40 hover:shadow-2xl overflow-hidden"
+            transition duration-300 ease-in-out transform hover:shadow-blue-500/40 hover:shadow-2xl overflow-hidden cursor-pointer"
           >
             <span className="relative z-10">INICIAR</span>
             <div
@@ -146,16 +146,18 @@ export default function InitialPage({
 
       {/* Botão de Menu */}
       <MenuButton onClick={alternarMenu} />
+
+      {/* Botão de Tutorial */}
       <TutorialButton onClick={() => setTutorialAberto(true)} />
 
-<TutorialModal
-  isOpen={tutorialAberto}
-  onClose={() => setTutorialAberto(false)}
-  gifs={[
-    { title: "Movimentar câmera", src: "/gifs/movimento.gif" },
-    { title: "Trocar de cena", src: "/gifs/troca.gif" },
-  ]}
-/>
+      <TutorialModal
+        isOpen={tutorialAberto}
+        onClose={() => setTutorialAberto(false)}
+        gifs={[
+          { title: "Movimentar câmera", src: "/gifs/movimento.gif" },
+          { title: "Trocar de cena", src: "/gifs/troca.gif" },
+        ]}
+      />
     </>
   );
 }

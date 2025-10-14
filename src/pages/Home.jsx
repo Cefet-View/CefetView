@@ -67,6 +67,14 @@ export default function Home() {
             Recursos
           </ScrollLink>
           <ScrollLink
+            to="quem-somos"
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-600 transition cursor-pointer"
+          >
+            Quem Somos
+          </ScrollLink>
+          <ScrollLink
             to="contatos"
             smooth={true}
             duration={500}
@@ -200,19 +208,19 @@ export default function Home() {
                   title: "CEFET-MG Leopoldina",
                   desc: "Tour virtual do CEFET-MG, uma referência nacional em experiências digitais educacionais.",
                   link: "https://tour.linceonline.com.br",
-                  img: "/CefetView/images/home/cefetmg.png", // Substitua pela imagem
+                  img: "/CefetView/images/home/cefetmg.png",
                 },
                 {
                   title: "Museu do Louvre",
                   desc: "Tour virtual internacional do Louvre, inspirando exploração imersiva e acessível.",
                   link: "https://www.louvre.fr/visites-en-ligne/petitegalerie/saison6/",
-                  img: "/CefetView/images/home/louvre.png", // Substitua pela imagem
+                  img: "/CefetView/images/home/louvre.png",
                 },
                 {
                   title: "Museu de História Natural",
                   desc: "Tour Virtual do Museu da Histório Natural.",
                   link: "https://naturalhistory2.si.edu/vt3/NMNH/?startscene=21&startactions=lookat(-62.93,-20.5,120,0,0);",
-                  img: "/CefetView/images/home/museuhistorianatural.png", // Substitua pela imagem
+                  img: "/CefetView/images/home/museuhistorianatural.png",
                 },
               ].map((item, i) => (
                 <motion.a
@@ -250,46 +258,25 @@ export default function Home() {
           </p>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-red-100 shadow-lg rounded-2xl p-8 flex flex-col items-center"
-            >
-              <FaUniversity size={50} className="text-red-600" />
-              <h3 className="mt-4 text-xl font-bold text-red-700">ODS 4</h3>
-              <p className="mt-2 text-gray-700 text-center">
-                Educação de Qualidade
-              </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-yellow-100 shadow-lg rounded-2xl p-8 flex flex-col items-center"
-            >
-              <FaIndustry size={50} className="text-yellow-600" />
-              <h3 className="mt-4 text-xl font-bold text-yellow-700">ODS 9</h3>
-              <p className="mt-2 text-gray-700 text-center">
-                Indústria, Inovação e Infraestrutura
-              </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-green-100 shadow-lg rounded-2xl p-8 flex flex-col items-center"
-            >
-              <FaBalanceScale size={50} className="text-green-600" />
-              <h3 className="mt-4 text-xl font-bold text-green-700">ODS 10</h3>
-              <p className="mt-2 text-gray-700 text-center">
-                Redução das Desigualdades
-              </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-blue-100 shadow-lg rounded-2xl p-8 flex flex-col items-center"
-            >
-              <FaCity size={50} className="text-blue-600" />
-              <h3 className="mt-4 text-xl font-bold text-blue-700">ODS 11</h3>
-              <p className="mt-2 text-gray-700 text-center">
-                Cidades e Comunidades Sustentáveis
-              </p>
-            </motion.div>
+            {[
+              { src: "/CefetView/images/Utilitários/ods4.svg", alt: "ODS 4" },
+              { src: "/CefetView/images/Utilitários/ods9.svg", alt: "ODS 9" },
+              { src: "/CefetView/images/Utilitários/ods10.svg", alt: "ODS 10" },
+              { src: "/CefetView/images/Utilitários/ods11.svg", alt: "ODS 11" },
+            ].map((ods, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+                className="rounded-2xl shadow-lg overflow-hidden"
+              >
+                <img
+                  src={ods.src}
+                  alt={ods.alt}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
           </div>
         </motion.section>
 
@@ -337,6 +324,73 @@ export default function Home() {
           </div>
         </motion.section>
 
+        {/* Quem Somos */}
+        <motion.section
+          id="quem-somos"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="py-24 px-8 sm:px-24 bg-white text-center"
+        >
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-12">
+            Quem Somos
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+            Conheça a equipe por trás do <b>CEFET VIEW</b>, um projeto
+            desenvolvido com dedicação e paixão por estudantes e orientador do
+            CEFET/RJ - Campus Nova Iguaçu.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Ulisses Roque Tomaz",
+                role: "Orientador",
+                github: "https://github.com/UlissesRTomaz",
+              },
+              {
+                name: "Juan Canle Marinho",
+                role: "Desenvolvedor",
+                github: "https://github.com/JuanCanle",
+              },
+              {
+                name: "Matheus Santos Fonseca",
+                role: "Desenvolvedor",
+                github: "https://github.com/Matheus-Santos-Fonseca",
+              },
+              {
+                name: "Davi Nogueira Souto",
+                role: "Desenvolvedor",
+                github: "https://github.com/DaviNogueira12",
+              },
+            ].map((member, i) => (
+              <motion.a
+                key={i}
+                href={member.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.2 }}
+                className="bg-gradient-to-br from-blue-50 to-blue-100 shadow-lg rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow"
+              >
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mb-4 shadow-md">
+                  <FaGithub size={48} className="text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-gray-600 font-semibold mb-4">
+                  {member.role}
+                </p>
+                <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+                  <FaGithub size={20} />
+                  <span className="text-sm font-medium">Ver perfil</span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </motion.section>
+
         {/* Contatos */}
         <motion.section
           id="contatos"
@@ -344,7 +398,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="py-24 px-8 sm:px-24 bg-white text-center"
+          className="py-24 px-8 sm:px-24 bg-gradient-to-br from-blue-50 to-blue-100 text-center"
         >
           <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-12">
             Entre em Contato

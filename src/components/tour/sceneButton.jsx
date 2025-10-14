@@ -4,7 +4,7 @@ export default function SceneButton({ label, isSelected, onClick }) {
       onClick={onClick} // Função que é chamada quando o botão é clicado para passar o prop onClick
       className={`
         group relative font-extrabold py-3 px-8 rounded-2xl shadow-md
-        transition duration-300 ease-in-out transform
+        transition duration-300 ease-in-out transform cursor-pointer
         hover:scale-105 active:scale-95 hover:[transform:translateY(-.335rem)] hover:shadow-xl
         ${
           isSelected

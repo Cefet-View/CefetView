@@ -23,9 +23,9 @@ export default function InitialPage({
 
   const botoes = {
     Inicial: "entradaescola",
-    "Bloco A": "torre2_andar1",
+    "Bloco A": "torre1_andar1",
     "Bloco B": "entrada_blocos_abc",
-    "Bloco C": "torre1_andar1",
+    "Bloco C": "torre2_andar1",
     "Bloco D": "entrada_bloco_d",
   };
 

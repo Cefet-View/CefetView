@@ -19,8 +19,7 @@ export default function SearchButton({ onSearch }) {
       if (cena.pesquisavel === 0) return false;
 
       return (
-        chave.toLowerCase().includes(termo) ||
-        cena.image.toLowerCase().includes(termo)
+        chave.toLowerCase().includes(termo)
       );
     });
 

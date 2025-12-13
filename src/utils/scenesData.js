@@ -49,7 +49,7 @@ export const scenesData = {
         image: "/CefetView/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(-60, -3, 5),
         scale: new THREE.Vector3(0.2, 0.2, 1),
-        targetScene: "ladoquadra",
+        targetScene: "quadra",
       },
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -59,9 +59,9 @@ export const scenesData = {
       },
     ],
   },
-  ladoquadra: {
+  quadra: {
     image: "/CefetView/images/Exterior/Lado_quadra.jpg",
-    pesquisavel: 0,
+    pesquisavel: 1,
     hotspot: [
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -391,7 +391,7 @@ export const scenesData = {
         image: "/CefetView/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(-5, -5, -10),
         scale: new THREE.Vector3(0.1, 0.1, 1),
-        targetScene: "ladoquadra",
+        targetScene: "quadra",
       },
     ],
   },

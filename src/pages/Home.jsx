@@ -149,7 +149,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.15 }}
-              onClick={() => navigate("/tour")}
+              onClick={() => navigate("/tour/entradaescola")}
               className="mt-6 group relative bg-white text-blue-600 font-extrabold cursor-pointer text-2xl sm:text-3xl py-4 px-12 rounded-2xl shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl overflow-hidden"
             >
               Iniciar Tour

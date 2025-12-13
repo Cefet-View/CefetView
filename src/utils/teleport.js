@@ -6,7 +6,8 @@ export function teleportTo(
   scene, // A cena
   setSphere, // Função para alterar a textura da esfera
   setHotspots, // Função para atualizar os hotspots da nova cena
-  setSceneId // Função para atualizar o ID da cena atual
+  setSceneId, // Função para atualizar o ID da cena atual
+  onComplete // OPTIONAL callback executado depois que o teleport/carregamento terminar
 ) {
   // Inicia o efeito de fade-in: deixa o overlay visível
   overlay.style.opacity = 1;
@@ -20,6 +21,14 @@ export function teleportTo(
     // Aguarda antes de iniciar o fade-out (sumir o overlay)
     setTimeout(() => {
       overlay.style.opacity = 0;
+      // Chama onComplete se foi passado (por exemplo para disparar userNavigated)
+      if (typeof onComplete === "function") {
+        try {
+          onComplete();
+        } catch (e) {
+          // ignore
+        }
+      }
     }, 300);
   }, 1000);
 }

@@ -19,6 +19,8 @@ import { teleportTo } from "../utils/teleport";
 // Componentes
 import InitialPage from "../components/tour/initialPage";
 
+import routeManager from "../utils/routeManager";
+
 export default function Tour() {
   const mountRef = useRef(null); // Div onde a cena 3D será montada
   const overlayRef = useRef(null); // Transição de tela (overlay) para efeito de fade-in/fade-out
@@ -92,6 +94,15 @@ export default function Tour() {
       controls,
     });
 
+    // inicializa routeManager com referência à scene para destacar hotspots
+    // (não altera comentários existentes)
+    routeManager.init({
+      scene,
+      setHotspots,
+      setSphere,
+      setSceneId,
+    });
+
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
@@ -119,14 +130,27 @@ export default function Tour() {
     const newSceneId = sceneId || "entradaescola";
 
     // Usa a função teleportTo para carregar a nova cena com a transição
+    // PASSAMOS um callback onComplete que só será executado quando teleportTo terminar.
     teleportTo(
       newSceneId,
       overlayRef.current,
       scene,
       setSphere,
       setHotspots,
-      () => {}
+      () => {}, // setSceneId não precisa ser passado aqui (já navegamos no interactions)
+      () => {
+        // Agora que o teleport terminou, avisamos o routeManager para recalcular.
+        // Disparamos userNavigated APENAS AQUI (uma vez).
+        window.dispatchEvent(
+          new CustomEvent("userNavigated", {
+            detail: { targetScene: newSceneId },
+          })
+        );
+      }
     );
+
+    // Garantimos que o routeManager sempre tenha a referência da scene atual:
+    routeManager._setSceneRef(scene);
   }, [sceneId, sceneState]);
 
   return (

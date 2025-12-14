@@ -9,6 +9,14 @@ export function setupInteraction(
   setHotspots, // Função para atualizar os hotspots da nova cena
   setSceneId // Função para atualizar o ID da cena atual
 ) {
+
+  function EHotspotInterativo(obj) {
+  const ud = obj.userData ?? {};
+  return (
+    ud.enabled &&
+    (ud.type === "modal" || ud.targetScene)
+  );
+}
   // Cria um raycaster para detectar interações com os hotspots
   const raycaster = new THREE.Raycaster();
   // Vetor que armazena a posição do mouse
@@ -30,20 +38,18 @@ export function setupInteraction(
     raycaster.setFromCamera(mouse, camera);
 
     const intersects = raycaster.intersectObjects(
-      scene.children.filter(
-        (obj) => obj.userData?.targetScene && obj.userData.enabled
-      )
+    scene.children.filter(EHotspotInterativo)
     );
 
     // Resetar todos os hotspots para escala original (usando a escala original armazenada)
     scene.children.forEach((obj) => {
-      if (obj.userData?.targetScene) {
-        if (!obj.userData.originalScale) {
-          obj.userData.originalScale = obj.scale.clone();
-        }
-        obj.scale.lerp(obj.userData.originalScale, 0.1);
+    if (EHotspotInterativo(obj)) {
+      if (!obj.userData.originalScale) {
+        obj.userData.originalScale = obj.scale.clone();
       }
-    });
+      obj.scale.lerp(obj.userData.originalScale, 0.1);
+    }
+  });
 
     if (intersects.length > 0) {
       const hotspot = intersects[0].object;
@@ -121,18 +127,25 @@ export function setupInteraction(
     raycaster.setFromCamera(mouse, camera);
 
     const intersects = raycaster.intersectObjects(
-      scene.children.filter(
-        (obj) => obj.userData?.targetScene && obj.userData.enabled
-      )
+    scene.children.filter(EHotspotInterativo)
     );
 
-    if (intersects.length > 0) {
-      const targetScene = intersects[0].object.userData.targetScene;
+     if (intersects.length > 0) {
+    const hotspot = intersects[0].object;
+    const { type, targetScene, modalId } = hotspot.userData ?? {};
 
-      // **NOVA LÓGICA**: apenas navega (setSceneId)
+    // Modal
+    if (type === "modal" && modalId) {
+  window.dispatchEvent(
+    new CustomEvent("openModal", {
+      detail: { modalId }
+    })
+  );
+}
+    // Navegação
+    else if (targetScene) {
       setSceneId(targetScene);
-
-      // NÃO disparamos userNavigated aqui
     }
-  });
+  }
+});
 }

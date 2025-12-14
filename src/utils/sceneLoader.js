@@ -63,9 +63,12 @@ export function loadScene(sceneId, scene, setSphere, setHotspots) {
       hotspot.position.copy(hsData.position);
       hotspot.scale.copy(hsData.scale);
 
-      // Armazena o ID da cena de destino no objeto
-      hotspot.userData.targetScene = hsData.targetScene;
-      hotspot.userData.enabled = true; // Inicialmente habilitado
+    hotspot.userData = {
+      targetScene: hsData.targetScene ?? null,  // Armazena o ID da cena de destino no objeto
+      type: hsData.type ?? null, // Tipo do Hotspot, como tem hotspot que n tem tipo, usa null
+      modalId: hsData.modalId ?? null, // Id do modal associado, se houver
+      enabled: true // Inicialmente habilitado
+    };
       // Adiciona o hotspot a lista e a cena
       loadedHotspots.push(hotspot);
       scene.add(hotspot);

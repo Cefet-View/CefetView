@@ -552,6 +552,14 @@ export const scenesData = {
         targetScene: "entrada_blocos_abc",
       },
       {
+        //modelo de hotspot informativo
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(9, -2, -4),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        type: "modal",
+        modalId: "modal-quadra"
+      },
+      {
         image: "/CefetView/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(-22, -2, -1),
         scale: new THREE.Vector3(0.1, 0.1, 1),

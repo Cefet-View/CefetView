@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import SceneButton from "./sceneButton.jsx";
@@ -7,6 +7,7 @@ import SearchButton from "./searchButton.jsx";
 import MenuButton from "./menuButton.jsx";
 import TutorialButton from "./tutorialButton.jsx";
 import TutorialModal from "./tutorialModal.jsx";
+import InfoModal from "./infoModal.jsx";
 
 export default function InitialPage({
   scene,
@@ -20,6 +21,26 @@ export default function InitialPage({
   const [moviment, setMoviment] = useState(false);
   const [show, setShow] = useState(true);
   const [tutorialAberto, setTutorialAberto] = useState(false);
+  const [modalAberto, setModalAberto] = useState(false);
+  const [modalId, setModalId] = useState(null);
+
+useEffect(() => {
+  function handleOpenModal(e) {
+    setModalId(e.detail.modalId);
+    setModalAberto(true);
+  }
+
+  window.addEventListener("openModal", handleOpenModal);
+
+  return () => {
+    window.removeEventListener("openModal", handleOpenModal);
+  };
+}, []);
+
+function closeModal() {
+  setModalAberto(false);
+  setModalId(null);
+}
 
   const botoes = {
     Inicial: "entradaescola",
@@ -45,9 +66,9 @@ export default function InitialPage({
 
   function lockarHotspots(desabilitado) {
     scene.children.forEach((obj) => {
-      if (obj.userData?.targetScene) {
-        obj.userData.enabled = !desabilitado;
-      }
+      if (obj.userData?.type === "modal" || obj.userData?.targetScene) {
+      obj.userData.enabled = !desabilitado;
+}
     });
   }
 
@@ -158,6 +179,35 @@ export default function InitialPage({
           { title: "Trocar de cena", src: "/gifs/troca.gif" },
         ]}
       />
+
+      <InfoModal isOpen={modalAberto} onClose={closeModal}>
+     {modalId === "modal-quadra" && (
+    <> 
+      //aqui é o titulo
+      <h1 className="text-6xl font-extrabold text-blue-900">
+        Secretaria
+      </h1>
+      //aqui é o texto
+      <p className="text-xl text-center max-w-3xl">
+       coiso
+      </p>
+    </>
+  )}
+
+  {/* Exemplo de Modal */}
+  {/* 
+  {modalId === "modal-biblioteca" && (
+    <>
+      <h1 className="text-6xl font-extrabold text-blue-900">
+        Biblioteca
+      </h1>
+      <p className="text-xl text-center max-w-3xl">
+        Ambiente de estudo e pesquisa com acervo físico e digital.
+      </p>
+    </>
+  )}
+  */}
+</InfoModal>
     </>
   );
 }

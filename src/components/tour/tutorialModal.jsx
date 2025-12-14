@@ -10,7 +10,7 @@ export default function TutorialModal({ isOpen, onClose }) {
     () => [
       { title: "Movimentação no Tour", src: "gifs/Hotspot.webm" },
       { title: "Movimentação entre os blocos", src: "gifs/Blocos.webm" },
-      { title: "Pesquisa de Lugares", src: "gifs/Pesquisa.webm" },
+      { title: "Movimentação por Rota", src: "gifs/Pesquisa_boa.webm" },
     ],
     []
   );

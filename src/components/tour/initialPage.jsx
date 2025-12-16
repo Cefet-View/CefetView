@@ -181,18 +181,59 @@ function closeModal() {
       />
 
       <InfoModal isOpen={modalAberto} onClose={closeModal}>
-     {modalId === "modal-quadra" && (
+     {modalId === "modal-secretaria" && (
     <> 
-      //aqui é o titulo
+      
       <h1 className="text-6xl font-extrabold text-blue-900">
         Secretaria
       </h1>
-      //aqui é o texto
-      <p className="text-xl text-center max-w-3xl">
-       coiso
+      
+      <p className="text-xl text-justify max-w-3xl">
+       A Secretaria Acadêmica do Cefet-RJ Campus Nova Iguaçu é o setor responsável por gerir e registrar toda a vida acadêmica dos estudantes da instituição. Seu propósito é assegurar a organização administrativa dos cursos, garantindo que processos como matrícula, emissão de documentos e registros escolares ocorram de forma correta, oficial e conforme as normas institucionais, servindo de elo entre os alunos, a coordenação dos cursos e a administração do campus.
       </p>
+      <h2 className="text-4xl font-extrabold text-blue-900 mb-4 max-w-3xl mx-auto text-left">
+      Horário de funcionamento
+      </h2>
+      <ul className="text-xl max-w-3xl mx-auto list-disc pl-6">
+        <li>Atendimento presencial de segunda a sexta-feira</li>
+        <li>9:00 às 12:00</li>
+        <li>13:00 às 18:00</li>
+      </ul>
+      <h2 className="text-4xl font-extrabold text-blue-900 mb-4 max-w-3xl mx-auto text-left">
+      Principais serviços prestados
+      </h2>
+      <ul className="text-xl max-w-3xl mx-auto list-disc pl-6">
+        <li>Matrícula e rematrícula de alunos</li>
+        <li>Emissão de documentos acadêmicos (declarações, históricos escolares, comprovantes de vínculo ou conclusão)</li>
+        <li>Cancelamento de matrícula, mediante requerimento</li>
+        <li>Solicitação de colação de grau</li>
+        <li>Atendimento e orientação sobre registros acadêmicos (notas, frequência, situação do aluno)</li>
+        <li>Apoio administrativo a alunos do ensino médio, técnico, graduação e pós-graduação</li>
+        <li>Recebimento e encaminhamento de requerimentos acadêmicos diversos</li>
+      </ul>
     </>
   )}
+
+  {modalId === "modal-quadra" && (
+    <> 
+      
+      <h1 className="text-6xl font-extrabold text-blue-900">
+        Quadra
+      </h1>
+      
+      <p className="text-xl text-justify max-w-3xl">
+       A quadra poliesportiva do Cefet-RJ Campus Nova Iguaçu é um espaço destinado à prática de atividades físicas, esportivas e pedagógicas, servindo principalmente aos alunos da instituição. Seu propósito é apoiar o desenvolvimento físico, social e coletivo dos estudantes, sendo utilizada prioritariamente durante as aulas de Educação Física, sob orientação dos professores responsáveis, além de poder sediar atividades esportivas, projetos de extensão e eventos internos previamente autorizados pela administração do campus.
+      </p>
+      <h2 className="text-4xl font-extrabold text-blue-900 mb-4 max-w-3xl mx-auto text-center">
+      Sobre o uso da quadra fora do horário de aula
+      </h2>
+      <p className="text-xl text-justify max-w-3xl">
+       Caso alunos ou grupos desejem utilizar a quadra fora do horário regular das aulas, é indispensável solicitar autorização prévia junto à subprefeitura do campus, setor responsável pela administração e controle dos espaços físicos. A retirada da chave da quadra também deve ser feita exclusivamente na subprefeitura, conforme orientação recebida no momento da autorização. Não é permitido acessar a quadra por vias alternativas, como transpor grades ou cercas, nem utilizá-la sem autorização formal. O descumprimento dessas normas configura uso irregular do espaço institucional e poderá resultar em advertência, registro de ocorrência administrativa ou outras medidas disciplinares cabíveis, conforme as normas internas do Cefet-RJ.
+      </p>
+      
+    </>
+  )}
+
 
   {/* Exemplo de Modal */}
   {/* 

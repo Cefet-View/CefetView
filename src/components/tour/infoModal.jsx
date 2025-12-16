@@ -34,7 +34,7 @@ export default function InfoModal({ isOpen, onClose, children }) {
             transition={{ duration: 0.6, ease: "easeInOut" }}
             className="fixed top-1/2 left-1/2 -translate-x-1/2 
               w-[80vw] h-[80vh] z-50
-              bg-white/20 backdrop-blur-md
+              bg-white
               rounded-3xl p-10 shadow-2xl
               flex flex-col justify-center items-center"
           >

@@ -69,6 +69,14 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "caminho_quadra",
       },
+      {
+        //modelo de hotspot informativo
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-30, -2, 9),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        type: "modal",
+        modalId: "modal-quadra"
+      }
     ],
   },
   entradafimescola: {
@@ -557,7 +565,7 @@ export const scenesData = {
         position: new THREE.Vector3(9, -2, -4),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         type: "modal",
-        modalId: "modal-quadra"
+        modalId: "modal-secretaria"
       },
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
@@ -1025,6 +1033,25 @@ export const scenesData = {
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "B2_corredor_oeste_2",
       },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(2.25, -4, 5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C201",
+      }
+    ],
+  },
+  C201: {
+    //Dentro do Lab de redes
+    image: "/CefetView/images/Bloco_C/Andar_2/C201.jpg",
+    pesquisavel: 0,
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-15, -1, -11),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "B2_corredor_oeste_1",
+      }
     ],
   },
   B2_corredor_oeste_2: {
@@ -1203,10 +1230,48 @@ export const scenesData = {
       },
       {
         image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(3.25, -3.25, 5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C301",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-3, -3.25, 5),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C303",
+      },
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
         position: new THREE.Vector3(18, -1.5, 1.25),
         scale: new THREE.Vector3(0.1, 0.1, 1),
         targetScene: "C3_corredor_oeste_5",
       },
+    ],
+  },
+  C301: {
+    image: "/CefetView/images/Bloco_C/Andar_3/C301.jpg",
+    //em frente aos laboratórios de informática C301 e C303
+    pesquisavel: 0,
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(2.5, -3.25, -10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C3_corredor_oeste_4",
+      }
+    ],
+  },
+  C303: {
+    image: "/CefetView/images/Bloco_C/Andar_3/C303.jpg",
+    //em frente aos laboratórios de informática C301 e C303
+    pesquisavel: 0,
+    hotspot: [
+      {
+        image: "/CefetView/images/Utilitários/hotspot.svg",
+        position: new THREE.Vector3(-3, -3.25, -10),
+        scale: new THREE.Vector3(0.1, 0.1, 1),
+        targetScene: "C3_corredor_oeste_4",
+      }
     ],
   },
   C3_corredor_oeste_5: {
